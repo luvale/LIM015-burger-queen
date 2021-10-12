@@ -1,4 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Roboto+Condensed:wght@700&display=swap');
+:root {
+  --titleFont: 'Chicle', cursive;
+  --mainFont:'Roboto Condensed', sans-serif;
+  --red: #F54748;
+  --background: #FEF2E7;
+}
 body {
-  background-color: #FEF2E7;
+  background-color: var(--background);
+  font-family: var(--mainFont);
 }
