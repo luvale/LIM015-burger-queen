@@ -3,38 +3,49 @@ body {
   background-size: cover;
   background-attachment : fixed;
 }
-section {
-  display: grid;
-}
 h1 {
-  font-family: var(--mainFont);
   color: var(--red);
   font-size: 4rem;
+  text-align: center;
  }
  #contenedor{
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  justify-content: space-around;
  }
- #chef , #waiter {
+ .divs{
+  position: relative;
+  display: flex;
+ }
+ #chef-btn,  #waiter-btn {
+  width: 20rem;
+  height: 10rem;
   background-color: var(--red);
   margin: 2rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
   border:none; 
-  font-family: var(--titleFont);
   color: #fff;
-  font-size: 4rem;
   transition: .3s;
  }
- #chef:active , #waiter:active {
+ #chef-img {
+   width: 12rem;
+   position: absolute;
+   top: -50%;
+   left: 25%;
+ }
+ #waiter-img {
+  width: 12.7rem;
+  position: absolute;
+  top: -43%;
+  left: 25%;
+}
+#chef-btn:active , #waiter-btn:active {
   background-color: var(--background);
   color: var(--red);
   transition: .3s;
  }
- #chef img {
-   width: 12rem;
-   margin: .7rem 4rem 0;
+ h2{
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  font-size: 2.6rem;
  }
- #waiter img {
-  width: 12.7rem;
-  margin: .7rem 4rem 0;
-}
