@@ -1,0 +1,28 @@
+{ "Menu" : [
+    { "Desayuno": {
+        "Café americano" : "$5",
+        "Café con leche" : "$7",
+        "Sandwich de jamón y queso": "$10",
+        "Jugo de frutas natural": "$7"
+    }
+    },
+    { "Menú día": {
+        "Hamburguesas": [
+            {"Hamburguesa simple":"$10",
+             "Hamburguesa doble": "$15"},
+             { "Tipo": [ "pollo" , "carne", "veggie"]},
+             {"Adicionales" : ["queso","huevo"]}
+        ],
+        "Acompañamientos" :{
+            "Papas fritas" : "$5",
+            "Onion rings": "$5"
+        },
+        "Para tomar": {
+            "Agua 500ml": "$5",
+            "Agua 750ml": "$7",
+            "Gaseosa 500ml": "$5",
+            "Gaseosa 750ml": "$7"
+        }
+    }}
+    ]
+}
