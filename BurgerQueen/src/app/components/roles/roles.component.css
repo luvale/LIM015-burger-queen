@@ -2,15 +2,24 @@ body {
   background-image: url('../../../assets/Background.png');
   background-size: cover;
   background-attachment : fixed;
+  background-position: center;
 }
 h1 {
+  margin-bottom: 3rem;
   color: var(--red);
   font-size: 4rem;
   text-align: center;
  }
+ section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
  #contenedor{
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
  }
  .divs{
   position: relative;

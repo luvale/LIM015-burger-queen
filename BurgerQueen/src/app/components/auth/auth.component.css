@@ -2,6 +2,12 @@ body {
   background-image: url('../../../assets/Background.png');
   background-size: cover;
   background-attachment : fixed;
+  background-position: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 button {
   color: #ffff;
@@ -13,7 +19,6 @@ button {
 }
 img{
   width: 15rem;
-  margin-top: 3%;
 }
 button:active {
   background-color: var(--background);
