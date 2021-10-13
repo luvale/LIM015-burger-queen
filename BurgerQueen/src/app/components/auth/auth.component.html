@@ -1,17 +1,19 @@
-<body class="vh-100 text-center">
-  <div>
-    <img src="../../../assets/Logo.png">  
-  </div>
-  <h1>Burger Queen</h1>
-  <div class="row w-20 justify-content-center">
-    <div class="col-auto">
-      <div class="p-2">
-        <input placeholder="Email">
-      </div>
-      <div class="p-2">
-        <input placeholder="Contraseña">
-      </div>
-      <button class="w-50">Ingresar</button>
+<body class="vh-100">
+  <section class="vh-100 text-center">
+    <div>
+      <img src="../../../assets/Logo.png">  
     </div>
-  </div>
+    <h1>Burger Queen</h1>
+    <div class="row w-20 justify-content-center">
+      <div class="col-auto">
+        <div class="p-2">
+          <input placeholder="Email">
+        </div>
+        <div class="p-2">
+          <input placeholder="Contraseña">
+        </div>
+        <a [routerLink]="['/roles']" ><button class="w-50">Ingresar</button></a>
+      </div>
+    </div>
+  </section>  
 </body>
