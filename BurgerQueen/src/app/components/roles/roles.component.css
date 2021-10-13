@@ -3,3 +3,38 @@ body {
   background-size: cover;
   background-attachment : fixed;
 }
+section {
+  display: grid;
+}
+h1 {
+  font-family: var(--mainFont);
+  color: var(--red);
+  font-size: 4rem;
+ }
+ #contenedor{
+  display: grid;
+  grid-template-columns: 50% 50%;
+ }
+ #chef , #waiter {
+  background-color: var(--red);
+  margin: 2rem;
+  border-radius: 3rem;
+  border:none; 
+  font-family: var(--titleFont);
+  color: #fff;
+  font-size: 4rem;
+  transition: .3s;
+ }
+ #chef:active , #waiter:active {
+  background-color: var(--background);
+  color: var(--red);
+  transition: .3s;
+ }
+ #chef img {
+   width: 12rem;
+   margin: .7rem 4rem 0;
+ }
+ #waiter img {
+  width: 12.7rem;
+  margin: .7rem 4rem 0;
+}

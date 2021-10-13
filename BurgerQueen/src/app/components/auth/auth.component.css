@@ -15,7 +15,7 @@ img{
   width: 15rem;
 }
 button:active {
-  background-color: #ffff;
+  background-color: var(--background);
   color: var(--red);
   font-size: 1.4rem;
 }
