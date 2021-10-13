@@ -1,27 +1,27 @@
-{ "Menu" : [
-    { "Desayuno": {
-        "Café americano" : "$5",
-        "Café con leche" : "$7",
-        "Sandwich de jamón y queso": "$10",
-        "Jugo de frutas natural": "$7"
+{ "menu" : [
+    { "desayuno": {
+        "cafe_americano" : "$5",
+        "cafe_con_leche" : "$7",
+        "sandwich_de_jamon_y_queso": "$10",
+        "jugo_de_frutas_natural": "$7"
     }
     },
-    { "Menú día": {
-        "Hamburguesas": [
-            {"Hamburguesa simple":"$10",
-             "Hamburguesa doble": "$15"},
-             { "Tipo": [ "pollo" , "carne", "veggie"]},
-             {"Adicionales" : ["queso","huevo"]}
+    { "menu_dia": {
+        "hamburguesas": [
+            {"hamburguesa_simple":"$10",
+             "hamburguesa_doble": "$15"},
+             { "tipo": [ "pollo" , "carne", "veggie"]},
+             {"adicionales" : ["queso","huevo"]}
         ],
-        "Acompañamientos" :{
-            "Papas fritas" : "$5",
-            "Onion rings": "$5"
+        "acompañamientos" :{
+            "papas_fritas" : "$5",
+            "onion_rings": "$5"
         },
-        "Para tomar": {
-            "Agua 500ml": "$5",
-            "Agua 750ml": "$7",
-            "Gaseosa 500ml": "$5",
-            "Gaseosa 750ml": "$7"
+        "para_tomar": {
+            "agua_500ml": "$5",
+            "agua_750ml": "$7",
+            "gaseosa_500ml": "$5",
+            "gaseosa_750ml": "$7"
         }
     }}
     ]
