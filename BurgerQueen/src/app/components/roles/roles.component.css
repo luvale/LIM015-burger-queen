@@ -7,7 +7,6 @@ h1 {
   color: var(--red);
   font-size: 4rem;
   text-align: center;
-  top: 20%;
  }
  #contenedor{
   display: flex;
@@ -15,7 +14,7 @@ h1 {
  }
  .divs{
   position: relative;
-  display: inline-block;
+  display: flex;
  }
  #chef-btn,  #waiter-btn {
   width: 20rem;
