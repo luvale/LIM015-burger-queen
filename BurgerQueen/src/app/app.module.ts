@@ -7,13 +7,15 @@ import { AuthComponent } from './components/auth/auth.component';
 import { RolesComponent } from './components/roles/roles.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TablesComponent } from './components/tables/tables.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     RolesComponent,
-    TablesComponent
+    TablesComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
