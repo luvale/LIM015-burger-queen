@@ -18,6 +18,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.component';
 
 // import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 
@@ -27,7 +28,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     AuthComponent,
     RolesComponent,
     TablesComponent,
-    PedidosComponent
+    PedidosComponent,
+    NavbarWaiterComponent
   ],
   imports: [
     BrowserModule,

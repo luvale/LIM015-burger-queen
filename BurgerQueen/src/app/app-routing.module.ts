@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './components/auth/auth.component';
 import { RolesComponent } from './components/roles/roles.component';
 import { TablesComponent } from './components/tables/tables.component';
+import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.component';
+
 
 const routes: Routes = [
   {
@@ -16,6 +18,10 @@ const routes: Routes = [
   {
     path: 'tables',
     component: TablesComponent,
+  },
+  {
+    path: 'navbar',
+    component: NavbarWaiterComponent,
   }
 ];
 
