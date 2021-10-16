@@ -6,14 +6,22 @@ import { FirestoreService } from '../../services/firestore.service';
   styleUrls: ['./tables.component.css']
 })
 export class TablesComponent implements OnInit {
-  tables: any[] = [];
+  // tables: any[] = [];
 
-  constructor(private service: FirestoreService) { }
+ //  constructor(private service: FirestoreService) { }
+  constructor() {}
 
   ngOnInit(): void {
-    this.mesas();
+    // this.mesas();
   }
+   alert() {
+    alert('soyUnaAlerta😎');
+  }
+  mesas() {
+   //console.log(this.service.mesas());
 
+  }
+/*
   mesas() {
     this.service.mesas().subscribe((data) => {
           this.tables = [];
@@ -25,4 +33,5 @@ export class TablesComponent implements OnInit {
       });
       console.log(this.tables);
     });
-  }}
+  } */
+}

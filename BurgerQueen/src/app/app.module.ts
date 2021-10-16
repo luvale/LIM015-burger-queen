@@ -2,13 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+
+// Nuestros componentes
 import { AuthComponent } from './components/auth/auth.component';
 import { RolesComponent } from './components/roles/roles.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { TablesComponent } from './components/tables/tables.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 
+// Firebase
 import { environment } from '../environments/environment';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
