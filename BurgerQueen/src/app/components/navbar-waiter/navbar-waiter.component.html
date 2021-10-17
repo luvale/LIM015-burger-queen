@@ -3,10 +3,10 @@
     <img src="../../../assets/Logo.png">
   </div>
   <div>
-    <button>Mesas</button>
-    <button>Pedidos</button>
+    <a [routerLink]="['/tables']"><button>Mesas</button></a>
+    <a [routerLink]="['/orders']"><button>Pedidos</button></a>
   </div>
   <div>
-    <i class="fas fa-sign-out-alt"></i>
+    <a [routerLink]="['/']"><i class="fas fa-sign-out-alt"></i></a>
   </div>
 </nav>
