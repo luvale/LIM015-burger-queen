@@ -27,7 +27,11 @@ export class TablesComponent implements OnInit {
          data: mesaData.payload.doc.data()
       })
      });
-     console.log(this.tables);
+     // console.log(this.tables);
     })
   }
+  updateTableStatus (id:string, status:boolean) {
+   this.service.updateTableStatus(id, (status === false) ? true : false)
+  }
+
 }
