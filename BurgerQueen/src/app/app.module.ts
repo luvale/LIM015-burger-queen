@@ -5,22 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
+// Firebase
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+
 // Nuestros componentes
 import { AuthComponent } from './components/auth/auth.component';
 import { RolesComponent } from './components/roles/roles.component';
 import { TablesComponent } from './components/tables/tables.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
-
-// Firebase
-import { environment } from '../environments/environment';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.component';
-
-// import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -29,17 +24,14 @@ import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.
     RolesComponent,
     TablesComponent,
     PedidosComponent,
-    NavbarWaiterComponent
+    NavbarWaiterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
