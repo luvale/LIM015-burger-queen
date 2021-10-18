@@ -1,6 +1,39 @@
 body {
   background-image: url('../../../assets/Background.png');
-  background-color: #FEF2E7; 
   background-size: cover;
   background-attachment : fixed;
+  background-position: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+button {
+  color: #ffff;
+  background-color: var(--red);
+  border-radius: 20px;
+  padding: .4rem;
+  border: none;
+  font-size: 1.8rem;
+}
+img{
+  width: 15rem;
+}
+button:active {
+  background-color: var(--background);
+  color: var(--red);
+}
+h1 {
+ font-family: var(--titleFont);
+ color: var(--red);
+ font-size: 5rem;
+}
+input, input::placeholder{
+  border: none;
+  border-radius: 20px;
+  width: 18rem;
+  color: var(--red);
+  padding: .4rem;
+  font-size: 1.8rem;
 }
