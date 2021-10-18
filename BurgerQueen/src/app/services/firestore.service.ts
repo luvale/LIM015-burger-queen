@@ -11,7 +11,7 @@ export class FirestoreService {
   constructor(
     private firestore: AngularFirestore
   ) { }
-   mesas() {
+   getTables() {
     return this.firestore.collection('mesas').snapshotChanges();
   }
 }
