@@ -14,9 +14,10 @@ export class TablesComponent implements OnInit {
   
   constructor(
     private service: FirestoreService
-    ) {   this.service.mesas().subscribe(
+    ) {   /*this.service.mesas().subscribe(
       table => { console.log(table) }
-    ); }
+    ); */
+  }
   // constructor() {}
 
   ngOnInit(): void {
@@ -24,17 +25,17 @@ export class TablesComponent implements OnInit {
     /*
     this.service.mesas().subscribe(
       table => { console.log(table) }
-    ); */
+    );*/
   }
   // this.items = this.service.collection('items').valueChanges();
-
    alert() {
     alert('soyUnaAlerta😎');
   }
+
   mesas() {
-   console.log(this.service.mesas());
+   console.log(this.service.mesas().subscribe((data) => console.log(data)));
   } 
-/*
+  /*
   mesas() {
     this.service.mesas().subscribe((data) => {
           this.tables = [];
