@@ -1,37 +1,9 @@
 <app-navbar-waiter></app-navbar-waiter>
 <body>
   <section>
-    <div class="cards" (click)='alert()'>
+    <div class="cards" *ngFor="let table of tables" id={{table.id}}>
       <div class="fill"><img src="../../../assets/table.svg"></div>
-      <h1>Mesa 1</h1>
-    </div>
-    <div class="cards">
-      <div class="fill"><img src="../../../assets/table.svg"></div>
-      <h1>Mesa 2</h1>
-    </div>
-    <div class="cards">
-      <div class="fill"><img src="../../../assets/table.svg"></div>
-      <h1>Mesa 3</h1>
-    </div>
-    <div class="cards">
-      <div class="fill"><img src="../../../assets/table.svg"></div>
-      <h1>Mesa 4</h1>
-    </div>
-    <div class="cards">
-      <div class="fill"><img src="../../../assets/table.svg"></div>
-      <h1>Mesa 5</h1>
-    </div>
-    <div class="cards">
-      <div class="fill"><img src="../../../assets/table.svg"></div>
-      <h1>Mesa 6</h1>
+      <h1>{{table.data.name}}</h1>
     </div>
   </section>
-
-  <!-- <section>
-    <div class="media" *ngFor="let table of tables">
-      <div class="media-body">
-        <p>{{table.data.mesa1}}</p>
-      </div>
-    </div>
-  </section> -->
 </body>
