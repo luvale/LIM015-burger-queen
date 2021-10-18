@@ -2,15 +2,26 @@ body {
   background-image: url('../../../assets/Background.png');
   background-size: cover;
   background-attachment : fixed;
+  background-position: center;
+  height: 100vh;
 }
 h1 {
+  margin-bottom: 3rem;
   color: var(--red);
   font-size: 4rem;
   text-align: center;
  }
+ section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100vh;
+ }
  #contenedor{
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
  }
  .divs{
   position: relative;

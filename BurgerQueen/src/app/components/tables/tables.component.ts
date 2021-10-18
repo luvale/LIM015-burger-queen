@@ -1,0 +1,33 @@
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { FirestoreService } from 'src/app/services/firestore.service';
+
+@Component({
+  selector: 'app-tables',
+  templateUrl: './tables.component.html',
+  styleUrls: ['./tables.component.css']
+})
+export class TablesComponent implements OnInit {
+  tables: any[] = [];
+  
+  constructor(
+    private service: FirestoreService
+    ) {}
+
+  ngOnInit(): void {
+    this.mesas();
+  }
+
+  mesas() {
+   this.service.mesas().subscribe((data) => {
+     // console.log(data);
+     data.forEach((mesaData) => {
+       this.tables.push({
+          id: mesaData.payload.doc.id,
+         data: mesaData.payload.doc.data()
+      })
+     });
+     console.log(this.tables);
+    })
+  }
+}

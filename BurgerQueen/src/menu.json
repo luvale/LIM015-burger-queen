@@ -1,0 +1,28 @@
+{ "menu" : [
+    { "desayuno": {
+        "cafe_americano" : "$5",
+        "cafe_con_leche" : "$7",
+        "sandwich_de_jamon_y_queso": "$10",
+        "jugo_de_frutas_natural": "$7"
+    }
+    },
+    { "menu_dia": {
+        "hamburguesas": [
+            {"hamburguesa_simple":"$10",
+             "hamburguesa_doble": "$15"},
+             { "tipo": [ "pollo" , "carne", "veggie"]},
+             {"adicionales" : ["queso","huevo"]}
+        ],
+        "acompañamientos" :{
+            "papas_fritas" : "$5",
+            "onion_rings": "$5"
+        },
+        "para_tomar": {
+            "agua_500ml": "$5",
+            "agua_750ml": "$7",
+            "gaseosa_500ml": "$5",
+            "gaseosa_750ml": "$7"
+        }
+    }}
+    ]
+}
