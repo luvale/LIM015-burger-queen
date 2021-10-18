@@ -15,11 +15,11 @@ export class TablesComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-    this.mesas();
+    this.getTables();
   }
 
-  mesas() {
-   this.service.mesas().subscribe((data) => {
+  getTables() {
+   this.service.getTables().subscribe((data) => {
      // console.log(data);
      data.forEach((mesaData) => {
        this.tables.push({
