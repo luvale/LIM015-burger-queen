@@ -16,6 +16,7 @@ import { RolesComponent } from './components/roles/roles.component';
 import { TablesComponent } from './components/tables/tables.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.component';
+import { TakeOrderComponent } from './components/take-order/take-order.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.
     TablesComponent,
     PedidosComponent,
     NavbarWaiterComponent,
+    TakeOrderComponent,
   ],
   imports: [
     BrowserModule,
