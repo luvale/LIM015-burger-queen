@@ -6,6 +6,9 @@ section {
   align-items: center;
 }
 .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1rem 2rem;
   width: 15rem;
   height: 17rem;
