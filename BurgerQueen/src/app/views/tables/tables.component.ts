@@ -12,7 +12,9 @@ export class TablesComponent implements OnInit {
   
   constructor(
     private service: FirestoreService
-    ) {}
+    ) {
+      // this.tables.forEach((table) => console.log(table.data.status))
+    }
 
   ngOnInit(): void {
     this.getTables();
@@ -31,7 +33,7 @@ export class TablesComponent implements OnInit {
     })
   }
   updateTableStatus (id:string, status:boolean) {
-   this.service.updateTableStatus(id, (status === false) ? true : false)
+   this.service.updateTableStatus(id, (status = !status))
   }
 
 }

@@ -11,11 +11,13 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 
 // Nuestros componentes
-import { AuthComponent } from './components/auth/auth.component';
-import { RolesComponent } from './components/roles/roles.component';
-import { TablesComponent } from './components/tables/tables.component';
-import { PedidosComponent } from './components/pedidos/pedidos.component';
+import { AuthComponent } from './views/auth/auth.component';
+import { RolesComponent } from './views/roles/roles.component';
+import { TablesComponent } from './views/tables/tables.component';
+import { PedidosComponent } from './views/orders/pedidos.component';
 import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.component';
+import { TakeOrderComponent } from './views/take-order/take-order.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.
     TablesComponent,
     PedidosComponent,
     NavbarWaiterComponent,
+    TakeOrderComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

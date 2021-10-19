@@ -1,7 +1,7 @@
 <app-navbar-waiter></app-navbar-waiter>
 <body>
   <section>
-    <div class="cards" *ngFor="let table of tables" id={{table.id}} (click)="updateTableStatus(table.id, table.data.status)">
+    <div [routerLink]="['/take-order']" class="cards" *ngFor="let table of tables" id={{table.id}} (click)="updateTableStatus(table.id, table.data.status)">
       <div class="fill"><img src="../../../assets/table.svg"></div>
       <h1>{{table.data.name}}</h1>
     </div>

@@ -14,13 +14,10 @@ export class FirestoreService {
    getTables() {
     return this.firestore.collection('mesas').snapshotChanges();
   }
-  /*
-  tableStatus(id:string) {
-    // return this.firestore.collection('mesas').doc(id)
-    return id;
-  } */
-  
   updateTableStatus(id: string, tableStatus: boolean) {
     return this.firestore.collection('mesas').doc(id).update({status: tableStatus});
   } 
+  getMenu() {
+    return this.firestore.collection('menu').snapshotChanges();
+  }
 }
