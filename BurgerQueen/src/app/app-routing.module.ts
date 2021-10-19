@@ -4,6 +4,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { RolesComponent } from './components/roles/roles.component';
 import { TablesComponent } from './components/tables/tables.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
+import { TakeOrderComponent } from './components/take-order/take-order.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'orders',
     component: PedidosComponent,
+  },
+  { 
+    path: 'take-order',
+    component: TakeOrderComponent,
   }
 ];
 
