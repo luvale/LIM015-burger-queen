@@ -17,6 +17,7 @@ import { TablesComponent } from './components/tables/tables.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.component';
 import { TakeOrderComponent } from './components/take-order/take-order.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TakeOrderComponent } from './components/take-order/take-order.component
     PedidosComponent,
     NavbarWaiterComponent,
     TakeOrderComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
