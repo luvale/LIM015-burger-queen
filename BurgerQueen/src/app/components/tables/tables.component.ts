@@ -31,7 +31,7 @@ export class TablesComponent implements OnInit {
     })
   }
   updateTableStatus (id:string, status:boolean) {
-   this.service.updateTableStatus(id, (status === false) ? true : false)
+   this.service.updateTableStatus(id, (status = !status))
   }
 
 }
