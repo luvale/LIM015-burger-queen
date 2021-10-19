@@ -17,10 +17,7 @@ export class FirestoreService {
   updateTableStatus(id: string, tableStatus: boolean) {
     return this.firestore.collection('mesas').doc(id).update({status: tableStatus});
   } 
-  getDesayuno() {
-    return this.firestore.collection('menu').doc('desayuno').snapshotChanges();
-  }
-  getMenuTarde() {
-    return this.firestore.collection('menu').doc('tarde').snapshotChanges();
+  getMenu() {
+    return this.firestore.collection('menu').snapshotChanges();
   }
 }

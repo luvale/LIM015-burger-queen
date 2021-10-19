@@ -14,7 +14,7 @@ section {
   text-align: center;
 }
 .fill {
-  background-color: #fff;
+  background-color: var(--background);
   margin: .5rem;
   width: 14rem;
   border-radius: 1rem;

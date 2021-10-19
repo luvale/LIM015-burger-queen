@@ -12,7 +12,9 @@ export class TablesComponent implements OnInit {
   
   constructor(
     private service: FirestoreService
-    ) {}
+    ) {
+      // this.tables.forEach((table) => console.log(table.data.status))
+    }
 
   ngOnInit(): void {
     this.getTables();
