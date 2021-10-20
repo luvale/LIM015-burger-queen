@@ -1,1 +1,7 @@
-<p *ngFor= "let item of desayuno" >{{item.data.producto}}</p>
+<section>
+  <div class="cards" *ngFor= "let item of desayuno">
+    <div><img src={{item.data.foto}}></div>
+    <div><h2>{{item.data.producto}}</h2></div>
+  </div>
+</section>
+
