@@ -1,1 +1,5 @@
-<p *ngFor= "let item of desayuno" >{{item.data.producto}}</p>
+<section *ngFor= "let item of desayuno">
+  <img src={{item.data.foto}}>
+  <p>{{item.data.producto}}</p>
+</section>
+
