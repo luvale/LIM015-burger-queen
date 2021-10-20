@@ -26,9 +26,13 @@ export class MenuComponent implements OnInit {
       })
       // console.log(this.productos);
       this.desayuno = this.getDesayuno();
+      this.tarde = this.getMenuTarde();
     })
    }
    getDesayuno() {
     return this.productos.filter((item) => item.data.horario == 'desayuno');
+   }
+   getMenuTarde() {
+    return this.productos.filter((item) => item.data.horario == 'tarde');
    }
 }
