@@ -11,6 +11,7 @@ export class MenuComponent implements OnInit {
   productos:any [] = [];
   desayuno: any[] = [];
   tarde: any[] = [];
+  estado: boolean = true;
 
   constructor(private service: FirestoreService) { }
 
@@ -34,5 +35,8 @@ export class MenuComponent implements OnInit {
    }
    getMenuTarde() {
     return this.productos.filter((item) => item.data.horario == 'tarde');
+   }
+   menu(event:any){
+    console.log(event.target.value)
    }
 }

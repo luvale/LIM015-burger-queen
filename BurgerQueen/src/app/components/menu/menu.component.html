@@ -1,10 +1,10 @@
 <select id="menu" name="menu">
-  <option value="desayuno" *ngFor= "let item of desayuno">Desayuno</option>
-  <option value="tarde">Resto del día</option>
+  <option value="desayuno" (change)="menu($event)">Desayuno</option>
+  <option value="tarde" (change)="menu($event)">Resto del día</option>
 </select>
 
-<section>
-  <div class="cards" id="desayuno" *ngFor= "let item of desayuno">
+<section id="desayuno">
+  <div class="cards" *ngFor= "let item of desayuno">
     <div><img src={{item.data.foto}}></div>
     <div><h2>{{item.data.producto}}</h2></div>
   </div>
