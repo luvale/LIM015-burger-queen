@@ -1,19 +1,14 @@
-<select id="menu" name="menu">
-  <option value="desayuno" (change)="menu($event)">Desayuno</option>
-  <option value="tarde" (change)="menu($event)">Resto del día</option>
-</select>
-
-<section id="desayuno">
-  <div class="cards" *ngFor= "let item of desayuno">
-    <div><img src={{item.data.foto}}></div>
-    <div><h2>{{item.data.producto}}</h2></div>
-  </div>
-</section>
-
-<section>
-  <div class="cards"  id="tarde" *ngFor= "let item of tarde">
-    <!-- <div><img src={{item.data.foto}}></div> -->
-    <div><h2>{{item.data.producto}}</h2></div>
-  </div>
-</section>
-
+<article>
+  <select id="menu" name="menu" (change)="filteredMenu($event)">
+    <option selected>Elige un horario</option>
+    <option value="desayuno">Desayuno</option>
+    <option value="tarde">Resto del día</option>
+  </select>
+  
+  <section>
+    <div class="cards" *ngFor= "let item of menu">
+      <div><img src={{item.data.foto}}></div>
+      <div><h2>{{item.data.producto}}</h2></div>
+    </div>
+  </section>
+</article>
