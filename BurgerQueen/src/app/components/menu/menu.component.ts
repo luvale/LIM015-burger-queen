@@ -9,9 +9,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 })
 export class MenuComponent implements OnInit {
   productos:any [] = [];
-  desayuno: any[] = [];
-  tarde: any[] = [];
-  estado: boolean = true;
+  menu: any[] = [];
 
   constructor(private service: FirestoreService) { }
 
@@ -25,18 +23,9 @@ export class MenuComponent implements OnInit {
           id: item.payload.doc.id,
           data: item.payload.doc.data()})
       })
-      // console.log(this.productos);
-      this.desayuno = this.getDesayuno();
-      this.tarde = this.getMenuTarde();
     })
    }
-   getDesayuno() {
-    return this.productos.filter((item) => item.data.horario == 'desayuno');
-   }
-   getMenuTarde() {
-    return this.productos.filter((item) => item.data.horario == 'tarde');
-   }
-   menu(event:any){
-    console.log(event.target.value)
+   filteredMenu($event:any){
+    this.menu = this.productos.filter((item) => item.data.horario == $event.target.value);
    }
 }
