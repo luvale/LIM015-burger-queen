@@ -1,0 +1,5 @@
+section{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 55% 45%;
+}

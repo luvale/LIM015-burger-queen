@@ -1,0 +1,9 @@
+aside {
+  background-color: #fff;
+  box-shadow: 0 4px 4px 0 black;
+  width: 95%;
+  height: 37rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
