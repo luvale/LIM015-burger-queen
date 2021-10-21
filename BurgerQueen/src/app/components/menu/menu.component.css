@@ -4,7 +4,7 @@ article {
   align-items: center;
 }
 select {
-  background-color: #B1664E;
+  background-color: var(--brown);
   border: none;
   border-radius: 1rem;  
   width: 13rem;

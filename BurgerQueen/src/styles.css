@@ -4,6 +4,7 @@
   --mainFont:'Roboto Condensed', sans-serif;
   --red: #F54748;
   --background: #FEF2E7;
+  --brown: #B1664E;
 }
 body {
   background-color: var(--background);
