@@ -6,9 +6,10 @@
   </select>
   
   <section>
-    <div class="cards" *ngFor= "let item of menu">
+    <div class="cards" (click)="cardClick(item.data)" *ngFor= "let item of menu">
       <div><img src={{item.data.foto}}></div>
       <div><h2>{{item.data.producto}}</h2></div>
     </div>
   </section>
+  <!-- <h1 *ngFor= "let item of cart">{{item.data.name}}</h1>-->
 </article>
