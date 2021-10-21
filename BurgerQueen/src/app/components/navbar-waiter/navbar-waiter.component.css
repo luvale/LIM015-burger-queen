@@ -11,7 +11,7 @@ img {
   width: 4.5rem;
 }
 button {
-  background-color: #B1664E;
+  background-color: var(--brown);
   border: none;
   border-radius: 1rem;  
   width: 13rem;

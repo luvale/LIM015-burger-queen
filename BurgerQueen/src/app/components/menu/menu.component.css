@@ -4,7 +4,7 @@ article {
   align-items: center;
 }
 select {
-  background-color: #B1664E;
+  background-color: var(--brown);
   border: none;
   border-radius: 1rem;  
   width: 13rem;
@@ -18,21 +18,21 @@ select {
 section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
   height: 75vh;
   align-content: flex-start;
 }
 .cards{
   background-color: var(--red);
-  width: 15rem;
-  height: 17rem;
-  margin: 1rem 2rem;
+  width: 13rem;
+  height: 15rem;
+  margin: 1rem;
   border-radius: 1rem;
   text-align: center;
 }
 img {
-  width: 13rem;
+  width: 11rem;
 }
 h2 {
   color: #fff;
