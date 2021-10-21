@@ -18,7 +18,6 @@ import { PedidosComponent } from './views/orders/pedidos.component';
 import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.component';
 import { TakeOrderComponent } from './views/take-order/take-order.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { ShopComponent } from './components/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { ShopComponent } from './components/shop/shop.component';
     NavbarWaiterComponent,
     TakeOrderComponent,
     MenuComponent,
-    ShopComponent,
   ],
   imports: [
     BrowserModule,
