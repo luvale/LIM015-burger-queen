@@ -4,7 +4,7 @@
     <option selected>Elige un horario</option>
     <option value="desayuno">Desayuno</option>
     <option value="tarde">Resto del día</option>
-  </select> 
+  </select>
     <article class="cards-container">
       <div class="cards" (click)="cardClick(item.data)" *ngFor= "let item of menu">
         <div><img src={{item.data.foto}}></div>
@@ -18,5 +18,25 @@
   <h1>Desayuno</h1>
   <br>
   <h1>Mesa 5</h1>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cart">
+        <th scope="row"><img class="icon" src="../../../assets/Icon-Trash.svg"></th>
+        <td>{{item.data.producto}}</td>
+        <td><button class="btn-icon" (click)=disminuirCantidad(item.data)><i class="fas fa-chevron-down"></i></button>{{cantidad}}<button class="btn-icon" (click)=aumentarCantidad()><i class="fas fa-chevron-up"></i></button> </td>
+        <td>${{item.data.precio * cantidad}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
 </aside>
 </section>

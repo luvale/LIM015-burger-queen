@@ -11,8 +11,11 @@ export class MenuComponent implements OnInit {
   allProducts:any [] = [];
   menu: any[] = [];
   cart: any[] = [];
+  cantidad:number;
 
-  constructor(private service: FirestoreService) { }
+  constructor(private service: FirestoreService) {
+    this.cantidad=1;
+  }
 
   ngOnInit(): void {
     this.getMenu();
@@ -33,4 +36,13 @@ export class MenuComponent implements OnInit {
     this.cart.push({data});
     console.log(this.cart)
    }
+   aumentarCantidad(){
+     this.cantidad++;
+     console.log("aumentó");
+   }
+   disminuirCantidad(data:any){
+    this.cantidad--;
+    console.log(data);
+  }
+
 }

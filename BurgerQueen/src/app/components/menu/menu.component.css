@@ -63,3 +63,18 @@ aside {
   text-align: center;
   outline: none;
 }
+
+.icon{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.btn-icon{
+  border-radius: 50%;
+  background-color:var(--red);
+  border: none;
+}
+
+i{
+  color: white;
+}
