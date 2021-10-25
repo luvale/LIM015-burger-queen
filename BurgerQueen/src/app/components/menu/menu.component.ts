@@ -11,10 +11,11 @@ export class MenuComponent implements OnInit {
   allProducts:any [] = [];
   menu: any[] = [];
   cart: any[] = [];
-  cantidad:number;
+  // cantidad:number;
+  horario:string = '';
 
   constructor(private service: FirestoreService) {
-    this.cantidad=1;
+   // this.cantidad=1;
   }
 
   ngOnInit(): void {
@@ -32,17 +33,20 @@ export class MenuComponent implements OnInit {
    filteredMenu($event:any){
     this.menu = this.allProducts.filter((item) => item.data.horario == $event.target.value);
    }
-   cardClick(data:Object) {
-    this.cart.push({data});
+   cardClick(data:Object, id:any) {
+    this.cart.push({
+      id,
+      data,
+      cantidad: 1,
+    });
     console.log(this.cart)
    }
-   aumentarCantidad(){
-     this.cantidad++;
-     console.log("aumentó");
+   aumentarCantidad(cantidad:number, id:string){
+     cantidad++;
+     console.log(cantidad, id);
    }
-   disminuirCantidad(data:any){
-    this.cantidad--;
-    console.log(data);
+   disminuirCantidad(cantidad:number){
+    cantidad--;
+    console.log(cantidad);
   }
-
 }

@@ -6,7 +6,7 @@
     <option value="tarde">Resto del día</option>
   </select>
     <article class="cards-container">
-      <div class="cards" (click)="cardClick(item.data)" *ngFor= "let item of menu">
+      <div class="cards" (click)="cardClick(item.data, item.id)" *ngFor= "let item of menu">
         <div><img src={{item.data.foto}}></div>
         <div><h2>{{item.data.producto}}</h2></div>
       </div>
@@ -42,8 +42,8 @@
       <tr *ngFor="let item of cart">
         <th scope="row"><img class="icon" src="../../../assets/Icon-Trash.svg"></th>
         <td>{{item.data.producto}}</td>
-        <td><button class="btn-icon" (click)=disminuirCantidad(item.data)><i class="fas fa-chevron-down"></i></button>{{cantidad}}<button class="btn-icon" (click)=aumentarCantidad()><i class="fas fa-chevron-up"></i></button> </td>
-        <td>${{item.data.precio * cantidad}}</td>
+        <td><button class="btn-icon" (click)=disminuirCantidad(item.cantidad)><i class="fas fa-chevron-down"></i></button>{{item.cantidad}}<button class="btn-icon" (click)=aumentarCantidad(item.cantidad,item.id)><i class="fas fa-chevron-up"></i></button> </td>
+        <td>${{item.data.precio * item.cantidad}}</td>
       </tr>
     </tbody>
   </table>
