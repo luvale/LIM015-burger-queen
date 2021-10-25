@@ -9,12 +9,14 @@
   align-items: center;
 }
 select {
-  background-color: var(--brown);
-  border: none;
-  border-radius: 1rem;  
+  background-color: white;
+  border-style: solid;
+  border-radius: 1rem;
+  border-color: var(--red);
+  border-width: medium;
   width: 13rem;
   height: 4rem;
-  color: #fff;
+  color: var(--red);
   margin: .6rem 0 0;
   font-size: 1.7rem;
   text-align: center;
@@ -44,7 +46,7 @@ h2 {
 }
 aside {
   background-color: #fff;
-  box-shadow: 0 4px 4px 0 black;
+  box-shadow: 0 5px 16px 0 #e4d4e2;
   width: 95%;
   height: 37rem;
   margin: 1rem;
@@ -62,4 +64,31 @@ aside {
   font-size: 1.5rem;
   text-align: center;
   outline: none;
+}
+
+.icon{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.btn-icon{
+  border-radius: 50%;
+  background-color:var(--red);
+  border: none;
+}
+
+i{
+  color: white;
+}
+h1{
+  font-size: 1.5rem;
+}
+
+.borderless td ,.borderless th {
+  border: none;
+}
+
+.tab-btn{
+  display:flex;
+  flex-direction: row;
 }

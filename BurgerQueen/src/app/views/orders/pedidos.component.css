@@ -1,0 +1,27 @@
+section {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.greenCard {
+  background-color: #fff;
+  border: solid;
+  border-color: var(--green);
+  box-shadow: 0 5px 16px 0 #e4d4e2;
+  width: 23rem;
+  height: 31rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.redCard{
+  background-color: #fff;
+  border: solid;
+  border-color: var(--red);
+  box-shadow: 0 5px 16px 0 #e4d4e2;
+  width: 23rem;
+  height: 31rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}

@@ -2,8 +2,9 @@
 :root {
   --titleFont: 'Chicle', cursive;
   --mainFont:'Roboto Condensed', sans-serif;
-  --red: #F54748;
   --background: #FEF2E7;
+  --red: #F54748;
+  --green: #6A9C27;
   --brown: #B1664E;
 }
 body {

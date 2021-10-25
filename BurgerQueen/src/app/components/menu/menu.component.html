@@ -4,19 +4,48 @@
     <option selected>Elige un horario</option>
     <option value="desayuno">Desayuno</option>
     <option value="tarde">Resto del día</option>
-  </select> 
+  </select>
     <article class="cards-container">
-      <div class="cards" (click)="cardClick(item.data)" *ngFor= "let item of menu">
+      <div class="cards" (click)="cardClick(item.data, item.id)" *ngFor= "let item of menu">
         <div><img src={{item.data.foto}}></div>
         <div><h2>{{item.data.producto}}</h2></div>
       </div>
     </article>
   </section>
 <aside>
+  <section class = "tab-btn">
   <button id="btn-edit">Editar</button>
-  <h1>Tipo de orden</h1>
-  <h1>Desayuno</h1>
-  <br>
-  <h1>Mesa 5</h1>
+  <div>
+  <table class ="table borderless">
+    <thead>
+      <tr>
+       
+        <th scope = "col">Tipo de orden</th>
+        <th>Mesa 5</th>
+      </tr>
+    </thead>
+      <td>Desayuno</td>
+  </table>
+</div>
+</section>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cart">
+        <th scope="row"><img class="icon" src="../../../assets/Icon-Trash.svg"></th>
+        <td>{{item.data.producto}}</td>
+        <td><button class="btn-icon" (click)=add(-base,item)><i class="fas fa-chevron-down"></i></button>{{item.cantidad}}<button class="btn-icon" (click)=add(base,item)><i class="fas fa-chevron-up"></i></button> </td>
+        <td>${{item.data.precio * item.cantidad}}</td>
+      </tr>
+    </tbody>
+  </table>
 </aside>
 </section>
