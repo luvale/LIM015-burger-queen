@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
   constructor(private service: FirestoreService) {
    // this.cantidad=1;
   }
-
+  public base: number = 1;
   ngOnInit(): void {
     this.getMenu();
   }
@@ -41,12 +41,7 @@ export class MenuComponent implements OnInit {
     });
     console.log(this.cart)
    }
-   aumentarCantidad(cantidad:number, id:string){
-     cantidad++;
-     console.log(cantidad, id);
-   }
-   disminuirCantidad(cantidad:number){
-    cantidad--;
-    console.log(cantidad);
+  add(base:number,item:any){
+    item.cantidad+= base;
   }
 }
