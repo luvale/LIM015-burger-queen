@@ -40,4 +40,7 @@ export class MenuComponent implements OnInit {
   changeAmount(base:number,item:any){
     item.cantidad+= base;
   }
+  deleteCart(){
+    this.cart = [];
+  }
 }
