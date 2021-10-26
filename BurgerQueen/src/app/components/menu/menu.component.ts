@@ -13,6 +13,7 @@ export class MenuComponent implements OnInit {
   cart: any[] = [];
   base: number = 1;
   type:string = '';
+  // total:number = 0;
 
   constructor(private service: FirestoreService) {}
   ngOnInit(): void {
@@ -36,9 +37,14 @@ export class MenuComponent implements OnInit {
       data,
       cantidad: 1,
     });
+    //this.totalPrice();
    }
   changeAmount(base:number,item:any){
-    item.cantidad+= base;
+    if(item.cantidad + base === 0){
+      this.deleteItem(item);
+    } else {
+      item.cantidad+= base;
+    }
   }
   deleteCart(){
     this.cart = [];
@@ -51,7 +57,12 @@ export class MenuComponent implements OnInit {
     if (index > -1){
       this.cart.splice(index, 1);
     }
-    console.log(this.cart);
     return this.cart;
   }
+  /*
+  totalPrice() {
+    this.cart.forEach((item) => {
+     //this.total = (item.data.precio) + this.total;
+    })
+  }*/
 }
