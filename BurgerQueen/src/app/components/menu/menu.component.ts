@@ -46,4 +46,12 @@ export class MenuComponent implements OnInit {
   typeOfMenu(horario:string){
     this.type = horario;
   }
+  deleteItem(item:any){
+    const index = this.cart.indexOf(item);
+    if (index > -1){
+      this.cart.splice(index, 1);
+    }
+    console.log(this.cart);
+    return this.cart;
+  }
 }

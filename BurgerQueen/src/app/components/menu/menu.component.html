@@ -33,7 +33,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of cart">
-        <th scope="row"><img class="icon" src="../../../assets/Icon-Trash.svg"></th>
+        <th scope="row"><img class="icon" (click)=deleteItem(item) src="../../../assets/Icon-Trash.svg"></th>
         <td>{{item.data.producto}}</td>
         <td><button class="btn-icon" (click)=changeAmount(-base,item)><i class="fas fa-chevron-down"></i></button>{{item.cantidad}}<button class="btn-icon" (click)=changeAmount(base,item)><i class="fas fa-chevron-up"></i></button> </td>
         <td>${{item.data.precio * item.cantidad}}</td>
