@@ -104,10 +104,10 @@ textarea {
   resize: none;
   background-color: white;
   border-style: solid;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
   border-color: var(--red);
   border-width: medium;
-  width: 20rem;
+  width: 23rem;
   height: 4rem;
   font-size: 1.3rem;
   text-align: center;

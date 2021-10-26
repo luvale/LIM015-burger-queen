@@ -12,6 +12,7 @@ export class MenuComponent implements OnInit {
   menu: any[] = [];
   cart: any[] = [];
   base: number = 1;
+  type:string = '';
 
   constructor(private service: FirestoreService) {}
   ngOnInit(): void {
@@ -35,12 +36,14 @@ export class MenuComponent implements OnInit {
       data,
       cantidad: 1,
     });
-    console.log(this.cart)
    }
   changeAmount(base:number,item:any){
     item.cantidad+= base;
   }
   deleteCart(){
     this.cart = [];
+  }
+  typeOfMenu(horario:string){
+    this.type = horario;
   }
 }
