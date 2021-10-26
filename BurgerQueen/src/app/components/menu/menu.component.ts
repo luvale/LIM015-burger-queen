@@ -11,10 +11,9 @@ export class MenuComponent implements OnInit {
   allProducts:any [] = [];
   menu: any[] = [];
   cart: any[] = [];
-  horario:string = '';
+  base: number = 1;
 
   constructor(private service: FirestoreService) {}
-  public base: number = 1;
   ngOnInit(): void {
     this.getMenu();
   }
