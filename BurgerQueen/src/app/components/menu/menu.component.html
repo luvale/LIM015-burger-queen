@@ -2,34 +2,27 @@
 <section class="menu">
   <select id="menu" name="menu" (change)="filteredMenu($event)">
     <option selected>Elige un horario</option>
-    <option value="desayuno">Desayuno</option>
-    <option value="tarde">Resto del día</option>
+    <option value="Desayuno">Desayuno</option>
+    <option value="Tarde">Resto del día</option>
   </select>
     <article class="cards-container">
-      <div class="cards" (click)="addToCart(item.data, item.id)" *ngFor= "let item of menu">
+      <div class="cards" (click)="addToCart(item.data, item.id)" (click)="typeOfMenu(item.data.horario)" *ngFor= "let item of menu">
         <div><img src={{item.data.foto}}></div>
         <div><h2>{{item.data.producto}}</h2></div>
       </div>
     </article>
   </section>
-<aside>
-  <section class = "tab-btn">
-  <button id="btn-edit">Editar</button>
-  <div>
-  <table class ="table borderless">
-    <thead>
-      <tr>
-       
-        <th scope = "col">Tipo de orden</th>
-        <th>Mesa 5</th>
-      </tr>
-    </thead>
-      <td>Desayuno</td>
-  </table>
-</div>
-</section>
-  <hr>
-  <table class="table">
+<aside class="cart">
+  <article class="cartTop">
+    <div>
+      <h1 id="title">Tipo de orden</h1>
+      <hr>
+      <h1 id="type">{{type}}</h1>
+    </div>
+    <h1 id="table">Mesa 5</h1>
+  </article>
+  <section class="table-container">
+    <table class="table">
     <thead>
       <tr>
         <th scope="col"></th>
@@ -46,6 +39,12 @@
         <td>${{item.data.precio * item.cantidad}}</td>
       </tr>
     </tbody>
-  </table>
+    </table>
+  </section>
+  <textarea placeholder="Agrega un comentario"></textarea>
+  <div id="btn-container">
+    <button id="btn-cancel" (click)=deleteCart()>Cancelar Pedido</button>
+    <button id="btn-send">Enviar a Cocina</button>
+  </div>
 </aside>
 </section>

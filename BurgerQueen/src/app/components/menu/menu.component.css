@@ -1,3 +1,4 @@
+/******MENÚ******/
 .container{
   display: grid;
   align-items: center;
@@ -44,7 +45,9 @@ img {
 h2 {
   color: #fff;
 }
-aside {
+
+/******CART******/
+.cart {
   background-color: #fff;
   box-shadow: 0 5px 16px 0 #e4d4e2;
   width: 95%;
@@ -53,42 +56,84 @@ aside {
   border-radius: 1rem;
   text-align: center;
 }
-#btn-edit {
-  background-color: var(--brown);
-  border: none;
-  border-radius: 1rem;  
-  width: 6rem;
-  height: 3rem;
-  color: #fff;
-  margin: .6rem 0 0;
-  font-size: 1.5rem;
-  text-align: center;
-  outline: none;
+.cartTop {
+  display:grid;
+  grid-template-columns: 35% 23%;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
+#title{
+  font-size: 1.2rem;
+  margin-top: .8rem;
+}
+#type{
+  font-size: 1.2rem;
+  margin-bottom: .8rem;
+}
+#table{
+  font-size: 1.4rem;
+}
+.table-container{
+  width: 95%;
+  height: 21rem;
+  overflow: auto;
+}
 .icon{
   width: 1.5rem;
   height: 1.5rem;
 }
-
 .btn-icon{
   border-radius: 50%;
   background-color:var(--red);
   border: none;
 }
-
 i{
   color: white;
 }
-h1{
-  font-size: 1.5rem;
+th, td {
+  font-size: 1.2rem;
 }
-
 .borderless td ,.borderless th {
   border: none;
 }
-
 .tab-btn{
   display:flex;
   flex-direction: row;
+}
+textarea {
+  resize: none;
+  background-color: white;
+  border-style: solid;
+  border-radius: 1.2rem;
+  border-color: var(--red);
+  border-width: medium;
+  width: 23rem;
+  height: 4rem;
+  font-size: 1.3rem;
+  text-align: center;
+  outline: none;
+}
+#btn-container{
+  display:flex;
+  justify-content: space-evenly;
+}
+#btn-cancel{
+  background-color: var(--red);
+  border-radius: 1rem;
+  border: none;
+  width: 7rem;
+  height: 4.2rem;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+#btn-send{
+  background-color: var(--green);
+  border-radius: 1rem;
+  border: none;
+  width: 7rem;
+  height: 4.2rem;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
 }
