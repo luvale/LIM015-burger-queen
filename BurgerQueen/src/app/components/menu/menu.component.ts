@@ -52,6 +52,7 @@ export class MenuComponent implements OnInit {
   }
   deleteCart(){
     this.cart = [];
+    this.total = 0;
   }
   typeOfMenu(horario:string){
     this.type = horario;
