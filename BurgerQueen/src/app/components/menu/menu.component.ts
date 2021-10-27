@@ -67,7 +67,12 @@ export class MenuComponent implements OnInit {
     return this.cart;
   }
   totalPrice() {
-    this.total = this.cart.map((item) => item.data.precio * item.cantidad)
+    if (this.cart.length == 0) {
+      this.total = 0;
+      this.type = '';
+    } else {
+      this.total = this.cart.map((item) => item.data.precio * item.cantidad)
     .reduce((acc, item) => acc +=item);
+    }
   }
 }
