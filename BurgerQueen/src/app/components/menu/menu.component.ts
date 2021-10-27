@@ -40,13 +40,14 @@ export class MenuComponent implements OnInit {
         cantidad: 1,
       });
     }
-    // this.totalPrice();
+    this.totalPrice();
    }
   changeAmount(base:number,item:any){
     if(item.cantidad + base === 0){
       this.deleteItem(item);
     } else {
       item.cantidad+= base;
+      this.totalPrice();
     }
   }
   deleteCart(){
@@ -59,13 +60,12 @@ export class MenuComponent implements OnInit {
     const index = this.cart.indexOf(item);
     if (index > -1) {
       this.cart.splice(index, 1);
+      this.totalPrice();
     }
     return this.cart;
   }
-  /*
   totalPrice() {
-    this.cart.forEach((item) => {
-     //this.total = (item.data.precio) + this.total;
-    })
-  } */
+    this.total = this.cart.map((item) => item.data.precio * item.cantidad)
+    .reduce((acc, item) => acc +=item);
+  }
 }
