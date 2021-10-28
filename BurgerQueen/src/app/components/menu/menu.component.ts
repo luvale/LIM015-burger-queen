@@ -14,7 +14,6 @@ export class MenuComponent implements OnInit {
   base: number = 1;
   type:string = '';
   total:number = 0;
-  comentario:string = '';
 
   constructor(private service: FirestoreService) {}
   ngOnInit(): void {
@@ -75,9 +74,8 @@ export class MenuComponent implements OnInit {
     .reduce((acc, item) => acc +=item);
     }
   }
-  
-  createOrder(){
-    this.service.createOrder(this.cart,this.total, this.comentario);
+  createOrder(comentario:string){
+    this.service.createOrder(this.cart,this.total, comentario);
     console.log("enviado");
   }
 }
