@@ -75,7 +75,7 @@ export class MenuComponent implements OnInit {
     .reduce((acc, item) => acc +=item);
     }
   }
-
+  
   createOrder(){
     this.service.createOrder(this.cart,this.total, this.comentario);
     console.log("enviado");
