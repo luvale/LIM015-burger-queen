@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
   base: number = 1;
   type:string = '';
   total:number = 0;
+  comentario:string = '';
 
   constructor(private service: FirestoreService) {}
   ngOnInit(): void {
@@ -52,6 +53,8 @@ export class MenuComponent implements OnInit {
   }
   deleteCart(){
     this.cart = [];
+    this.total = 0;
+    this.type = '';
   }
   typeOfMenu(horario:string){
     this.type = horario;
@@ -65,7 +68,16 @@ export class MenuComponent implements OnInit {
     return this.cart;
   }
   totalPrice() {
-    this.total = this.cart.map((item) => item.data.precio * item.cantidad)
+    if (this.cart.length == 0) {
+      this.total = 0;
+      this.type = '';
+    } else {
+      this.total = this.cart.map((item) => item.data.precio * item.cantidad)
     .reduce((acc, item) => acc +=item);
+    }
+  }
+  
+  createOrder(){
+    this.service.createOrder(this.cart,this.total, this.comentario);
   }
 }

@@ -25,3 +25,46 @@ section {
   border-radius: 1rem;
   text-align: center;
 }
+.table-name {
+  margin-top: .5rem;
+  font-size: 1.7rem;
+}
+.hour {
+  font-size: 1.2rem;
+  color: #3B5162;
+  margin: 0.5rem;
+}
+.table-container {
+  height: 21rem;
+  overflow: auto;
+}
+hr {
+  margin: .5rem;
+}
+table{
+  width: 100%;
+}
+th {
+  color: #3B5162;
+  text-align: center;
+  font-size: 1.4rem;
+}
+td {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.status-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.status-title {
+  font-size: 1.4rem;
+}
+.pending {
+  font-size: 1.7rem;
+  color: var(--red);
+}
+.ready {
+  font-size: 1.7rem;
+  color: var(--green);
+}

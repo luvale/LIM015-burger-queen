@@ -34,16 +34,19 @@ select {
 .cards{
   background-color: var(--red);
   width: 13rem;
-  height: 15rem;
+  height: 16rem;
   margin: 1rem;
   border-radius: 1rem;
   text-align: center;
 }
 img {
-  width: 11rem;
+  margin-top:.5rem;
+  width: 12rem;
+  border-radius: 1rem;
 }
-h2 {
+.card-name {
   color: #fff;
+  font-size: 1.7rem;
 }
 
 /******CART******/
