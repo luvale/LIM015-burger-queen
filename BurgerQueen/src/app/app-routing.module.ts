@@ -5,6 +5,7 @@ import { RolesComponent } from './views/roles/roles.component';
 import { TablesComponent } from './views/tables/tables.component';
 import { PedidosComponent } from './views/orders/pedidos.component';
 import { TakeOrderComponent } from './views/take-order/take-order.component';
+import { ChefComponent } from './views/chef/chef.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   { 
     path: 'take-order',
     component: TakeOrderComponent,
+  },
+  {
+    path: 'chef-order',
+    component: ChefComponent,
   }
 ];
 

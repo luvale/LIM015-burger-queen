@@ -18,6 +18,8 @@ import { PedidosComponent } from './views/orders/pedidos.component';
 import { NavbarWaiterComponent } from './components/navbar-waiter/navbar-waiter.component';
 import { TakeOrderComponent } from './views/take-order/take-order.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ChefComponent } from './views/chef/chef.component';
+import { NavbarChefComponent } from './components/navbar-chef/navbar-chef.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { MenuComponent } from './components/menu/menu.component';
     NavbarWaiterComponent,
     TakeOrderComponent,
     MenuComponent,
+    ChefComponent,
+    NavbarChefComponent,
   ],
   imports: [
     BrowserModule,
