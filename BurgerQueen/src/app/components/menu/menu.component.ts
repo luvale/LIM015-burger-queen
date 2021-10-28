@@ -76,6 +76,5 @@ export class MenuComponent implements OnInit {
   }
   createOrder(comentario:string){
     this.service.createOrder(this.cart,this.total, comentario);
-    console.log("enviado");
   }
 }
