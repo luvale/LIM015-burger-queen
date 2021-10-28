@@ -30,4 +30,7 @@ export class FirestoreService {
       hora: new Date(),
     })
   }
+  getOrder() {
+    return this.firestore.collection('pedidos').snapshotChanges();
+  }
 }
