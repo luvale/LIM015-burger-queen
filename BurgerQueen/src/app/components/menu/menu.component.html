@@ -6,7 +6,7 @@
     <option value="Tarde">Resto del día</option>
   </select>
     <article class="cards-container">
-      <div class="cards" (click)="addToCart(item.data, item.id)" (click)="typeOfMenu(item.data.horario)" *ngFor= "let item of menu">
+      <div class="cards" (click)="addToCart(item.data)" (click)="typeOfMenu(item.data.horario)" *ngFor= "let item of menu">
         <div><img src={{item.data.foto}}></div>
         <div><h2 class="card-name">{{item.data.producto}}</h2></div>
       </div>

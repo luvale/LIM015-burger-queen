@@ -32,11 +32,10 @@ export class MenuComponent implements OnInit {
    filteredMenu($event:any){
     this.menu = this.allProducts.filter((item) => item.data.horario == $event.target.value);
    }
-   addToCart(data:Object, id:any) {
+   addToCart(data:Object) {
     let product = this.cart.find((item) => item.data === data);
     if (product === undefined) {
       this.cart.push({
-        id,
         data,
         cantidad: 1,
       });
@@ -79,5 +78,6 @@ export class MenuComponent implements OnInit {
 
   createOrder(){
     this.service.createOrder(this.cart,this.total, this.comentario);
+    console.log("enviado");
   }
 }
