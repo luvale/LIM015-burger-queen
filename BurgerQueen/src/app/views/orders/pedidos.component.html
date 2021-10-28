@@ -1,6 +1,6 @@
 <app-navbar-waiter></app-navbar-waiter>
 <section>
-  <article class="redCard">
+  <article class="redCard" *ngFor="let item of order">
     <h1 class="table-name">Mesa 1</h1>
     <p class="hour">Hora: 10:52:00 a.m</p>
     <hr>
@@ -10,63 +10,19 @@
           <th>Cantidad</th>
           <th>Producto</th>
         </tr>
-        <tr>
-          <td>1</td>
-          <td >Pollito con papas</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Tequeños</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td >Pollito con papas</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Tequeños</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td >Pollito con papas</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Tequeños</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td >Pollito con papas</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Tequeños</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td >Pollito con papas</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Tequeños</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td >Pollito con papas</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Tequeños</td>
+        <tr  *ngFor = "let producto of item.data.cart"> 
+          <td>{{producto.cantidad}}</td>
+          <td >{{producto.data.producto}}</td>
         </tr>
       </table>
     </div>
       <hr>
       <div class="status-container">
         <h2 class="status-title">Estado</h2> 
-        <h2 class="pending">Pendiente</h2>
+        <h2 class="pending">{{item.data.status}}</h2>
       </div>
   </article>
-  <article class="greenCard"></article>
+  <!-- <article class="greenCard"></article>
   <article class="redCard"></article>
-  <article class="greenCard"></article>
+  <article class="greenCard"></article> -->
 </section>

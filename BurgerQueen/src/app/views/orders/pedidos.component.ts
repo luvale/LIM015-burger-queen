@@ -22,6 +22,7 @@ export class PedidosComponent implements OnInit {
           data: item.payload.doc.data()})
       })
     })
+    console.log(this.order);
    }
   
 }

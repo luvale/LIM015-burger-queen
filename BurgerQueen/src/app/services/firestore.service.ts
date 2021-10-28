@@ -26,7 +26,7 @@ export class FirestoreService {
       cart,
       precioTotal,
       comentario,
-      status: "pendiente",
+      status: "Pendiente",
       hora: new Date(),
     })
   }
