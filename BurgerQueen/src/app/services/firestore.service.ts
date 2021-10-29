@@ -33,7 +33,7 @@ export class FirestoreService {
   getOrder() {
     return this.firestore.collection('pedidos').snapshotChanges();
   }
-  updateOrderStatus(id: string, orderStatus: string) {
-    return this.firestore.collection('pedidos').doc(id).update({status:orderStatus});
+  updateOrderStatus(id: string) {
+    return this.firestore.collection('pedidos').doc(id).update({status: "Listo"});
   }
 }
