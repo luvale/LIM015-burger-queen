@@ -22,7 +22,7 @@
     <hr>
       <div class="status-container">
         <h2 class="status-title">Estado</h2> 
-        <button click=updateOrderStatus()><h2 class="pending">{{item.data.status}}</h2></button>
+        <button (click)=updateOrderStatus(item.id)><h2 class="pending">{{item.data.status}}</h2></button>
       </div>
   </article>
 </section>

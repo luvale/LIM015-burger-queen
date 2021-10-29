@@ -17,13 +17,14 @@ export class ChefComponent implements OnInit {
     this.service.getOrder().subscribe((data) => {
       data.forEach((item) => {
         this.order.push({
+          id: item.payload.doc.id,
           data: item.payload.doc.data()})
       })
     })
     console.log(this.order);
    }
-   updateOrderStatus (id:string, status:string) {
+   updateOrderStatus (id:string) {
     console.log('updated');
-    this.service.updateOrderStatus(id, (status = "Listo"));
+    this.service.updateOrderStatus(id);
    }
 }
