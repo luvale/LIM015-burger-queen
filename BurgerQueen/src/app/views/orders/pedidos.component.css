@@ -4,6 +4,11 @@ section {
   justify-content: space-evenly;
 }
 .greenCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: #fff;
   border: solid;
   border-color: var(--green);
@@ -12,9 +17,13 @@ section {
   height: 31rem;
   margin: 1rem;
   border-radius: 1rem;
-  text-align: center;
 }
 .redCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: #fff;
   border: solid;
   border-color: var(--red);
@@ -23,7 +32,6 @@ section {
   height: 31rem;
   margin: 1rem;
   border-radius: 1rem;
-  text-align: center;
 }
 .table-name {
   margin-top: .5rem;
@@ -35,7 +43,8 @@ section {
   margin: 0.5rem;
 }
 .table-container {
-  height: 21rem;
+  width: 100%;
+  height: 16rem;
   overflow: auto;
 }
 hr {
@@ -54,6 +63,7 @@ td {
   font-size: 1.2rem;
 }
 .status-container {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -67,4 +77,20 @@ td {
 .ready {
   font-size: 1.7rem;
   color: var(--green);
+}
+.total {
+  font-size: 1.4rem;
+  margin: 0;
+}
+.coment-container {
+  display:flex;
+  justify-content: center;
+}
+.coment {
+  color: #3B5162;
+  font-size: 1.4rem;
+  width: 19rem;
+  height: 3rem;
+  margin: 0;
+  overflow: auto;
 }
