@@ -10,19 +10,20 @@
           <th>Cantidad</th>
           <th>Producto</th>
         </tr>
-        <tr  *ngFor = "let producto of item.data.cart"> 
+        <tr *ngFor = "let producto of item.data.cart"> 
           <td>{{producto.cantidad}}</td>
           <td >{{producto.data.producto}}</td>
         </tr>
       </table>
     </div>
-      <hr>
+    <p class="total">Total: ${{item.data.precioTotal}}</p>
+    <div class="coment-container" *ngIf= "item.data.comentario !== '' ">
+      <p class="coment">{{item.data.comentario}}</p>
+    </div>
+    <hr>
       <div class="status-container">
         <h2 class="status-title">Estado</h2> 
         <h2 class="pending">{{item.data.status}}</h2>
       </div>
   </article>
-  <!-- <article class="greenCard"></article>
-  <article class="redCard"></article>
-  <article class="greenCard"></article> -->
 </section>
