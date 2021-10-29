@@ -1,1 +1,28 @@
-<p>chef works!</p>
+<app-navbar-chef></app-navbar-chef>
+<section>
+  <article class="redCard" *ngFor="let item of order">
+    <h1 class="table-name">Mesa 1</h1>
+    <p class="hour">Hora: 10:52:00 a.m</p>
+    <hr>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Cantidad</th>
+          <th>Producto</th>
+        </tr>
+        <tr *ngFor = "let producto of item.data.cart"> 
+          <td>{{producto.cantidad}}</td>
+          <td >{{producto.data.producto}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="coment-container" *ngIf= "item.data.comentario !== '' ">
+      <p class="coment">{{item.data.comentario}}</p>
+    </div>
+    <hr>
+      <div class="status-container">
+        <h2 class="status-title">Estado</h2> 
+        <button click=updateOrderStatus()><h2 class="pending">{{item.data.status}}</h2></button>
+      </div>
+  </article>
+</section>

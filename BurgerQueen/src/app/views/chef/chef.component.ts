@@ -1,15 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FirestoreService } from 'src/app/services/firestore.service';
 @Component({
   selector: 'app-chef',
   templateUrl: './chef.component.html',
   styleUrls: ['./chef.component.css']
 })
 export class ChefComponent implements OnInit {
+  order:any[] = [];
 
-  constructor() { }
-
+  constructor(private service: FirestoreService) { }
   ngOnInit(): void {
+    this.getOrder();
   }
 
+  getOrder(){
+    this.service.getOrder().subscribe((data) => {
+      data.forEach((item) => {
+        this.order.push({
+          data: item.payload.doc.data()})
+      })
+    })
+    console.log(this.order);
+   }
+   updateOrderStatus (id:string, status:string) {
+    console.log('updated');
+    this.service.updateOrderStatus(id, (status = "Listo"));
+   }
 }

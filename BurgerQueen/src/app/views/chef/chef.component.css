@@ -1,0 +1,96 @@
+section {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .greenCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border: solid;
+    border-color: var(--green);
+    box-shadow: 0 5px 16px 0 #e4d4e2;
+    width: 23rem;
+    height: 31rem;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  .redCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border: solid;
+    border-color: var(--red);
+    box-shadow: 0 5px 16px 0 #e4d4e2;
+    width: 23rem;
+    height: 31rem;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  .table-name {
+    margin-top: .5rem;
+    font-size: 1.7rem;
+  }
+  .hour {
+    font-size: 1.2rem;
+    color: #3B5162;
+    margin: 0.5rem;
+  }
+  .table-container {
+    width: 100%;
+    height: 16rem;
+    overflow: auto;
+  }
+  hr {
+    margin: .5rem;
+  }
+  table{
+    width: 100%;
+  }
+  th {
+    color: #3B5162;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  td {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .status-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .status-title {
+    font-size: 1.4rem;
+  }
+  .pending {
+    font-size: 1.7rem;
+    color: var(--red);
+  }
+  .ready {
+    font-size: 1.7rem;
+    color: var(--green);
+  }
+  .total {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  .coment-container {
+    display:flex;
+    justify-content: center;
+  }
+  .coment {
+    color: #3B5162;
+    font-size: 1.4rem;
+    width: 19rem;
+    height: 3rem;
+    margin: 0;
+    overflow: auto;
+  }
