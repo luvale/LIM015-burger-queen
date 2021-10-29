@@ -26,8 +26,11 @@ export class FirestoreService {
       cart,
       precioTotal,
       comentario,
-      status: "pendiente",
+      status: "Pendiente",
       hora: new Date(),
     })
+  }
+  getOrder() {
+    return this.firestore.collection('pedidos').snapshotChanges();
   }
 }
