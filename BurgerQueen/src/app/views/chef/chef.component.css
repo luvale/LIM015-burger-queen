@@ -66,17 +66,33 @@ section {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
   }
   .status-title {
     font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  button {
+    background-color: var(--red);
+    border: none;
+    border-radius: 1rem;  
+    width: 8rem;
+    height: 3rem;
+    color: #fff;
+    margin: .6rem 0 0;
+    font-size: 1.5rem;
+    text-align: center;
+    outline: none;
   }
   .pending {
     font-size: 1.7rem;
-    color: var(--red);
+    color: white;
+    margin-bottom: 0;
   }
   .ready {
     font-size: 1.7rem;
     color: var(--green);
+    margin-bottom: 0;
   }
   .total {
     font-size: 1.4rem;
