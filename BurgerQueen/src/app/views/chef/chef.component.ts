@@ -15,6 +15,7 @@ export class ChefComponent implements OnInit {
 
   getOrder(){
     this.service.getOrder().subscribe((data) => {
+      this.order = [];
       data.forEach((item) => {
         this.order.push({
           id: item.payload.doc.id,
