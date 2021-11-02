@@ -16,6 +16,7 @@ export class PedidosComponent implements OnInit {
 
   getOrder(){
     this.service.getOrder().subscribe((data) => {
+      this.order = [];
       data.forEach((item) => {
         this.order.push({
           data: item.payload.doc.data()})

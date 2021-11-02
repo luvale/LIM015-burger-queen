@@ -1,6 +1,7 @@
 <app-navbar-waiter></app-navbar-waiter>
 <section>
-  <article class="redCard" *ngFor="let item of order">
+  <article [ngClass]="{'greenCard': (item.data.status === 'Listo'), 
+  'redCard': (item.data.status === 'Pendiente')}" *ngFor="let item of order">
     <h1 class="table-name">Mesa 1</h1>
     <p class="hour">Hora: 10:52:00 a.m</p>
     <hr>
@@ -23,7 +24,8 @@
     <hr>
       <div class="status-container">
         <h2 class="status-title">Estado</h2> 
-        <h2 class="pending">{{item.data.status}}</h2>
+        <h2 [ngClass]="{'ready': (item.data.status === 'Listo'), 
+        'pending': (item.data.status === 'Pendiente')}">{{item.data.status}}</h2>
       </div>
   </article>
 </section>

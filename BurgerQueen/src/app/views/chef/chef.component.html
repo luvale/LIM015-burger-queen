@@ -1,6 +1,7 @@
 <app-navbar-chef></app-navbar-chef>
 <section>
-  <article class="redCard" *ngFor="let item of order">
+  <article [ngClass]="{'greenCard': (item.data.status === 'Listo'), 
+  'redCard': (item.data.status === 'Pendiente')}" *ngFor="let item of order">
     <h1 class="table-name">Mesa 1</h1>
     <p class="hour">Hora: 10:52:00 a.m</p>
     <hr>
@@ -17,12 +18,14 @@
       </table>
     </div>
     <div class="coment-container" *ngIf= "item.data.comentario !== '' ">
-      <p class="coment">{{item.data.comentario}}</p>
+      <p class="coment">Comentario: {{item.data.comentario}}</p>
     </div>
     <hr>
       <div class="status-container">
         <h2 class="status-title">Estado</h2> 
-        <button (click)=updateOrderStatus(item.id)><h2 class="pending">{{item.data.status}}</h2></button>
+        <button *ngIf="(item.data.status === 'Pendiente'); else ready" (click)=updateOrderStatus(item.id)>
+          <h2 class="pending">{{item.data.status}}</h2></button>
+        <ng-template #ready><h2 class="ready">{{item.data.status}}</h2></ng-template>
       </div>
   </article>
 </section>

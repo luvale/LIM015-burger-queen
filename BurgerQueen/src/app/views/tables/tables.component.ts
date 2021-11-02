@@ -23,6 +23,7 @@ export class TablesComponent implements OnInit {
   getTables() {
    this.service.getTables().subscribe((data) => {
      // console.log(data);
+     this.tables = [];
      data.forEach((mesaData) => {
        this.tables.push({
           id: mesaData.payload.doc.id,
