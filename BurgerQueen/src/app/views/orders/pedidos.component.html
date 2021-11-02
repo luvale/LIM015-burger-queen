@@ -3,7 +3,7 @@
   <article [ngClass]="{'greenCard': (item.data.status === 'Listo'), 
   'redCard': (item.data.status === 'Pendiente')}" *ngFor="let item of order">
     <h1 class="table-name">Mesa 1</h1>
-    <p class="hour">Hora: 10:52:00 a.m</p>
+    <p class="hour">{{ item.data.hora.toDate() | date:'dd/MM/yyyy h:mm:ss a' }}</p>
     <hr>
     <div class="table-container">
       <table>

@@ -7,6 +7,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 })
 export class PedidosComponent implements OnInit {
   order:any[] = [];
+  name = 'Sheldon';
 
   constructor(private service: FirestoreService) { }
 
@@ -22,7 +23,6 @@ export class PedidosComponent implements OnInit {
           data: item.payload.doc.data()})
       })
     })
-    console.log(this.order);
    }
   
 }

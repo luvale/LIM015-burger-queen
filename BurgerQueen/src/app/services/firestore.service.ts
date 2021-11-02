@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Timestamp } from '@firebase/firestore-types';
 
 @Injectable({
   providedIn: 'root'

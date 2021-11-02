@@ -45,7 +45,7 @@
   <textarea placeholder="Agrega un comentario" #comentario></textarea>
   <div id="btn-container">
     <button id="btn-cancel" (click)=deleteCart()>Cancelar Pedido</button>
-    <button id="btn-send" (click)=createOrder(comentario.value) [routerLink]="['/orders']">Enviar a Cocina</button>
+    <button id="btn-send" (click)=createOrder(comentario.value) [routerLink]="['/tables']">Enviar a Cocina</button>
   </div>
 </aside>
 </section>
