@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { ComunicationService } from 'src/app/services/comunication.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 

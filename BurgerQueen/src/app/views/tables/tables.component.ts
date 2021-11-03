@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { ComunicationService } from 'src/app/services/comunication.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 
@@ -23,7 +22,6 @@ export class TablesComponent implements OnInit {
 
   getTables() {
    this.firestore.getTables().subscribe((data) => {
-     // console.log(data);
      this.tables = [];
      data.forEach((mesaData) => {
        this.tables.push({
@@ -31,7 +29,6 @@ export class TablesComponent implements OnInit {
          data: mesaData.payload.doc.data()
       })
      });
-     // console.log(this.tables);
     })
   }
 
