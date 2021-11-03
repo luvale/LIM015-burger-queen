@@ -11,7 +11,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 
 // Nuestros componentes
-import { AuthComponent } from './views/auth/auth.component';
+import { AuthComponent } from './views/home/auth.component';
 import { RolesComponent } from './views/roles/roles.component';
 import { TablesComponent } from './views/tables/tables.component';
 import { PedidosComponent } from './views/orders/pedidos.component';
