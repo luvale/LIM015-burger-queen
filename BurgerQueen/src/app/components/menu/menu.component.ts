@@ -15,16 +15,16 @@ export class MenuComponent implements OnInit {
   base: number = 1;
   type:string = '';
   total:number = 0;
-  selectedTable:string = '';
+  selectedTable:any;
 
   constructor(private firestore: FirestoreService,
     private comunication: ComunicationService) {}
+    
   ngOnInit(): void {
     this.getMenu();
-    this.comunication.disparador.subscribe((data) => {
-      // console.log(data);
-      this.selectedTable = data.table.data.name;
-      console.log(this.selectedTable);
+    this.comunication.disparadorObservable.subscribe((data) => {
+      console.log(data);
+      this.selectedTable = data;
     })
   }
   getMenu(){
@@ -85,8 +85,8 @@ export class MenuComponent implements OnInit {
   createOrder(comentario:string){
     this.firestore.createOrder(this.cart,this.total, comentario);
   }
-/*
-  updateTableStatus() {
-    this.firestore.updateTableStatus(this.selectedTable[0].table.id, (this.selectedTable.table.data.status = !status))
-   }*/
+
+  updateTableStatus(id:string, status:boolean) {
+    this.firestore.updateTableStatus(id, (status = !status))
+   }
 }

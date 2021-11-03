@@ -37,6 +37,6 @@ export class TablesComponent implements OnInit {
 
   selectedTable(table:object) {
     // console.log(table);
-    this.comunication.disparador.emit({table})
+    this.comunication.sendSelectedTable(table);
   }
 }
