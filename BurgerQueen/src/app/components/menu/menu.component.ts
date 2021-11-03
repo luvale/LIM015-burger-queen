@@ -83,7 +83,7 @@ export class MenuComponent implements OnInit {
     }
   }
   createOrder(comentario:string){
-    this.firestore.createOrder(this.cart,this.total, comentario);
+    this.firestore.createOrder(this.cart,this.total, comentario, this.selectedTable.data.name);
   }
 
   updateTableStatus(id:string, status:boolean) {

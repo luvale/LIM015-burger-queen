@@ -20,13 +20,14 @@ export class FirestoreService {
   getMenu() {
     return this.firestore.collection('menu').snapshotChanges();
   }
-  createOrder(cart:any[],precioTotal: number, comentario: string) {
+  createOrder(cart:any[],precioTotal: number, comentario: string, mesa: object) {
     return this.firestore.collection('pedidos').add({
       cart,
       precioTotal,
       comentario,
       status: "Pendiente",
       hora: new Date(),
+      mesa,
     })
   }
   getOrder() {

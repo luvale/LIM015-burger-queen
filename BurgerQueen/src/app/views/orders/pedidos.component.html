@@ -2,7 +2,7 @@
 <section>
   <article [ngClass]="{'greenCard': (item.data.status === 'Listo'), 
   'redCard': (item.data.status === 'Pendiente')}" *ngFor="let item of order">
-    <h1 class="table-name">Mesa 1</h1>
+    <h1 class="table-name">{{item.data.mesa}}</h1>
     <p class="hour">{{ item.data.hora.toDate() | date:' h:mm:ss a' }}</p>
     <hr>
     <div class="table-container">
@@ -19,7 +19,7 @@
     </div>
     <p class="total">Total: ${{item.data.precioTotal}}</p>
     <div class="coment-container" *ngIf= "item.data.comentario !== '' ">
-      <p class="coment">{{item.data.comentario}}</p>
+      <p class="coment">Comentario: {{item.data.comentario}}</p>
     </div>
     <hr>
       <div class="status-container">

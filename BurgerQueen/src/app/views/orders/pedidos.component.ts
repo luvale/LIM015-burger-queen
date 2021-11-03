@@ -7,7 +7,6 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 })
 export class PedidosComponent implements OnInit {
   order:any[] = [];
-  name = 'Sheldon';
 
   constructor(private service: FirestoreService) { }
 
