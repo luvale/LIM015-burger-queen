@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ComunicationService } from 'src/app/services/comunication.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
@@ -11,9 +12,9 @@ export class TablesComponent implements OnInit {
   tables: any[] = [];
   
   constructor(
-    private service: FirestoreService
+    private firestore: FirestoreService,
+    private comunication: ComunicationService
     ) {
-      // this.tables.forEach((table) => console.log(table.data.status))
     }
 
   ngOnInit(): void {
@@ -21,7 +22,7 @@ export class TablesComponent implements OnInit {
   }
 
   getTables() {
-   this.service.getTables().subscribe((data) => {
+   this.firestore.getTables().subscribe((data) => {
      // console.log(data);
      this.tables = [];
      data.forEach((mesaData) => {
@@ -33,8 +34,9 @@ export class TablesComponent implements OnInit {
      // console.log(this.tables);
     })
   }
-  updateTableStatus (id:string, status:boolean) {
-   this.service.updateTableStatus(id, (status = !status))
-  }
 
+  selectedTable(table:object) {
+    // console.log(table);
+    this.comunication.disparador.emit({table})
+  }
 }
