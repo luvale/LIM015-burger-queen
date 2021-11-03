@@ -1,7 +1,8 @@
 <app-navbar-waiter></app-navbar-waiter>
 <body>
   <section>
-    <div [routerLink]="['/take-order']" class="cards" *ngFor="let table of tables" id={{table.id}} (click)="updateTableStatus(table.id, table.data.status)">
+    <!--  (click)="updateTableStatus(table.id, table.data.status)" -->
+    <div class="cards" *ngFor="let table of tables" id={{table.id}} [routerLink]="['/take-order']" (click)="selectedTable(table)">
       
       <div *ngIf="(table.data.status === true); else elseBlock">
         <div class="fill"><img src="../../../assets/table.svg"></div>
