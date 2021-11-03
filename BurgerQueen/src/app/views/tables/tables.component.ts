@@ -33,7 +33,6 @@ export class TablesComponent implements OnInit {
   }
 
   selectedTable(table:object) {
-    // console.log(table);
     this.comunication.sendSelectedTable(table);
   }
 }
