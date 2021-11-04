@@ -1,6 +1,6 @@
-# Burger Queen 🍔 👑
+# Burger Queen 
 
-## [Visualízalo aquí](https://burgerqueen-vale.netlify.app/)
+## 🍔 [Visualízalo aquí](https://burgerqueen-vale.netlify.app/)  👑
 
 ## Índice
 
