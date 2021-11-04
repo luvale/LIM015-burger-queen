@@ -7,9 +7,7 @@
 * [1. Preámbulo](#1-preámbulo)
 * [1. Herramientas](#2-herramientas)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)
+* [4.  Definición del producto](#4-definición-del-producto)
 
 ***
 
@@ -70,7 +68,7 @@ Interfaz desarrollada con:
 (El chef puede cambiar el pedido de "Pendiente" a "Listo" con un botón)
 <img alt="Menú resto del día" src="BurgerQueen/src/assets/ordersChef.png">
 
-## 4. Objetivos de aprendizaje
+## 3. Objetivos de aprendizaje
 
 ### HTML
 
@@ -329,7 +327,7 @@ Interfaz desarrollada con:
 </p></details>
 
 
-## 5. Definición del producto
+## 4. Definición del producto
 
 El [_Product Owner_](https://youtu.be/r2hU7MVIzxs) nos
 presenta este _backlog_ que es el resultado de su trabajo con el cliente hasta
