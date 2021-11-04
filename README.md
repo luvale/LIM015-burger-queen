@@ -3,7 +3,7 @@
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
-* [1. Preámbulo](#2-resumen-del-proyecto)
+* [1. Herramientas](#2-herramientas)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -20,7 +20,7 @@ a la cocina para que se preparen ordenada y eficientemente (a través de un
 
 ![Cangreburger](https://media.giphy.com/media/l4FB5Lq0A02xxMTC0/giphy.gif)
 
-## 2. Resumen del proyecto
+## 2. Herramientas
 
 Interfaz desarrollada con:
 
@@ -40,72 +40,39 @@ Interfaz desarrollada con:
 
 <img alt="Netflify" src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
 
+<br><br>
 
-<br>
-<br>
+## 3. Vistas
 
-Esta es la información que tenemos del cliente:
+### Home Page
+<img alt="Home Page" src="BurgerQueen/src/assets/home.png">
 
-> Somos **Burguer Queen**, una cadena de comida 24hrs.
->
-> Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida y, para
-> seguir creciendo, necesitamos un sistema que nos ayude a tomar los pedidos de
-> nuestros clientes.
->
-> Tenemos 2 menús: uno muy sencillo para el desayuno:
->
-> | Ítem                      |Precio $|
-> |---------------------------|------|
-> | Café americano            |    5 |
-> | Café con leche            |    7 |
-> | Sandwich de jamón y queso |   10 |
-> | Jugo de frutas natural              |    7 |
->
-> Y otro menú para el resto del día:
->
-> | Ítem                      |Precio|
-> |---------------------------|------|
-> |**Hamburguesas**           |   **$**   |
-> |Hamburguesa simple         |    10|
-> |Hamburguesa doble          |    15|
-> |**Acompañamientos**        |   **$**   |
-> |Papas fritas               |     5|
-> |Aros de cebolla            |     5|
-> |**Para tomar**             |   **$**   |
-> |Agua 500ml                 |     5|
-> |Agua 750ml                 |     7|
-> |Bebida/gaseosa 500ml       |     7|
-> |Bebida/gaseosa 750ml       |     10|
->
-> **Importante:** Los clientes pueden escoger entre hamburguesas de res,
-> de pollo, o vegetariana. Además, por $ 1 adicional, pueden agregarle queso
-> o huevo.
->
-> Nuestros clientes son bastante indecisos, por lo que es muy común que cambien
->el su pedido varias veces antes de finalizarlo.
+### Selecciona tu rol
+<img alt="Roles Page" src="BurgerQueen/src/assets/roles.png">
 
-La interfaz debe mostrar los dos menús (desayuno y resto del día), cada uno
-con todos sus _productos_. El usuario debe poder ir eligiendo qué _productos_
-agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
-costo total.
+### Selecciona una mesa
+(Cuando se envía un pedido la mesa cambia de status)
+<img alt="Tables Page" src="BurgerQueen/src/assets/tables.png">
 
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
+### Menú Desayuno
+<img alt="Menú Desayuno" src="BurgerQueen/src/assets/menu1.png">
 
-El objetivo principal de este proyecto es aprender a construir una _interfaz web_
-usando el _framework_ elegido (React, Vue o Angular). Todos estos frameworks de
-Front-end atacan el mismo problema: **cómo mantener la interfaz y el estado sincronizados**.
-Así que esta experiencia espera familiarizarte con el concepto de _estado de pantalla_,
-y cómo cada cambio sobre el estado se va a ir reflejando en la interfaz (por ejemplo,
-cada vez que agregamos un _producto_ a un _pedido_, la interfaz debe actualizar
-la lista del pedido y el total).
+### Menú para el resto del día
+<img alt="Menú resto del día" src="BurgerQueen/src/assets/menu2.png">
 
-## 3. Objetivos de aprendizaje
+### Pedidos para el mesero
+(Las tarjetas de los pedidos tienen borde verde si el pedido está "Listo" o rojo si el pedido está "Pendiente")
+<img alt="Menú resto del día" src="BurgerQueen/src/assets/ordersWaiter.png">
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+### Pedidos para el chef
+(El chef puede cambiar el pedido de "Pendiente" a "Listo" con un botón)
+<img alt="Menú resto del día" src="BurgerQueen/src/assets/ordersChef.png">
+
+## 4. Objetivos de aprendizaje
 
 ### HTML
 
-- [ ] **Uso de HTML semántico**
+- [x] **Uso de HTML semántico**
 
   <details><summary>Links</summary><p>
 
@@ -115,7 +82,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### CSS
 
-- [ ] **Uso de selectores de CSS**
+- [x] **Uso de selectores de CSS**
 
   <details><summary>Links</summary><p>
 
@@ -123,7 +90,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
 </p></details>
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
+- [x] **Modelo de caja (box model): borde, margen, padding**
 
   <details><summary>Links</summary><p>
 
@@ -134,7 +101,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
 </p></details>
 
-- [ ] **Uso de flexbox en CSS**
+- [x] **Uso de flexbox en CSS**
 
   <details><summary>Links</summary><p>
 
@@ -143,7 +110,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 </p></details>
 
-- [ ] **Uso de CSS Grid Layout**
+- [x] **Uso de CSS Grid Layout**
 
   <details><summary>Links</summary><p>
 
@@ -158,9 +125,9 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [CSS media queries - MDN](https://developer.mozilla.org/es/docs/CSS/Media_queries)
 </p></details>
 
-### JavaScript
+### Typescript
 
-- [ ] **Arrays (arreglos)**
+- [x] **Arrays (arreglos)**
 
   <details><summary>Links</summary><p>
 
@@ -173,16 +140,16 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 </p></details>
 
-- [ ] **Objetos (key, value)**
+- [x] **Objetos (key, value)**
 
   <details><summary>Links</summary><p>
 
   * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
 </p></details>
 
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
+- [x] **Diferenciar entre tipos de datos primitivos y no primitivos**
 
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
+- [x] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
 
   <details><summary>Links</summary><p>
 
@@ -190,7 +157,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
 </p></details>
 
-- [ ] **Funciones (params, args, return)**
+- [x] **Funciones (params, args, return)**
 
   <details><summary>Links</summary><p>
 
@@ -231,11 +198,11 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **Uso de linter (ESLINT)**
 
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+- [x] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 
-- [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
+- [x] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
-- [ ] **Callbacks**
+- [x] **Callbacks**
 
   <details><summary>Links</summary><p>
 
@@ -252,13 +219,13 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### Control de Versiones (Git y GitHub)
 
-- [ ] **Git: Instalación y configuración**
+- [x] **Git: Instalación y configuración**
 
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+- [x] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
+- [x] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
 
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+- [x] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 
 - [ ] **GitHub: Despliegue con GitHub Pages**
 
@@ -267,19 +234,19 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Sitio oficial de GitHub Pages](https://pages.github.com/)
 </p></details>
 
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
+- [x] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
 
-- [ ] **GitHub: Organización en Github (projects | issues | labels | milestones | releases)**
+- [x] **GitHub: Organización en Github (projects | issues | labels | milestones | releases)**
 
 ### UX (User eXperience)
 
-- [ ] **Diseñar la aplicación pensando en y entendiendo al usuario**
+- [x] **Diseñar la aplicación pensando en y entendiendo al usuario**
 
-- [ ] **Crear prototipos para obtener feedback e iterar**
+- [x] **Crear prototipos para obtener feedback e iterar**
 
 - [ ] **Aplicar los principios de diseño visual (contraste, alineación, jerarquía)**
 
-- [ ] **Planear y ejecutar tests de usabilidad**
+- [x] **Planear y ejecutar tests de usabilidad**
 
 ### Firebase
 
@@ -291,7 +258,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Administra usuarios en Firebase (onAuthStateChanged)](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user)
 </p></details>
 
-- [ ] **Firestore**
+- [x] **Firestore**
 
   <details><summary>Links</summary><p>
 
@@ -302,7 +269,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### Angular
 
-- [ ] **Components & templates**
+- [x] **Components & templates**
 
   <details><summary>Links</summary><p>
 
@@ -310,7 +277,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Introduction to components and templates - Documentación oficial (en inglés)](https://angular.io/guide/architecture-components#introduction-to-components)
 </p></details>
 
-- [ ] **Directivas estructurales (ngIf / ngFor)**
+- [x] **Directivas estructurales (ngIf / ngFor)**
 
   <details><summary>Links</summary><p>
 
@@ -324,21 +291,21 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Component interaction - Documentación oficial (en inglés)](https://angular.io/guide/component-interaction#component-interaction)
 </p></details>
 
-- [ ] **Creación y uso de servicios**
+- [x] **Creación y uso de servicios**
 
   <details><summary>Links</summary><p>
 
   * [Providing services - Documentación oficial (en inglés)](https://angular.io/guide/architecture-services#providing-services)
 </p></details>
 
-- [ ] **Manejo de rutas**
+- [x] **Manejo de rutas**
 
   <details><summary>Links</summary><p>
 
   * [In-app navigation: routing to views - Documentación oficial (en inglés)](https://angular.io/guide/router)
 </p></details>
 
-- [ ] **Creación y uso Observables.**
+- [x] **Creación y uso Observables.**
 
   <details><summary>Links</summary><p>
 
@@ -352,150 +319,13 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Communicating with backend services using HTTP - Documentación oficial (en inglés)](https://angular.io/guide/http)
 </p></details>
 
-- [ ] **Estilos de componentes (ngStyle / ngClass)**
+- [x] **Estilos de componentes (ngStyle / ngClass)**
 
   <details><summary>Links</summary><p>
 
   * [Template syntax - Documentación oficial (en inglés)](https://angular.io/guide/template-syntax#built-in-directives)
 </p></details>
 
-### React
-
-- [ ] **JSX**
-
-  <details><summary>Links</summary><p>
-
-  * [Presentando JSX - Documentación oficial](https://es.reactjs.org/docs/introducing-jsx.html)
-</p></details>
-
-- [ ] **Componentes y propiedades (props)**
-
-  <details><summary>Links</summary><p>
-
-  * [Componentes y propiedades - Documentación oficial](https://es.reactjs.org/docs/components-and-props.html)
-</p></details>
-
-- [ ] **Manejo de eventos**
-
-  <details><summary>Links</summary><p>
-
-  * [Manejando eventos - Documentación oficial](https://es.reactjs.org/docs/handling-events.html)
-</p></details>
-
-- [ ] **Listas y keys**
-
-  <details><summary>Links</summary><p>
-
-  * [Listas y keys - Documentación oficial](https://es.reactjs.org/docs/lists-and-keys.html)
-</p></details>
-
-- [ ] **Renderizado condicional**
-
-  <details><summary>Links</summary><p>
-
-  * [Renderizado condicional - Documentación oficial](https://es.reactjs.org/docs/conditional-rendering.html)
-</p></details>
-
-- [ ] **Elevación de estado**
-
-  <details><summary>Links</summary><p>
-
-  * [Levantando el estado - Documentación oficial](https://es.reactjs.org/docs/lifting-state-up.html)
-</p></details>
-
-- [ ] **Hooks**
-
-  <details><summary>Links</summary><p>
-
-  * [Presentando Hooks - Documentación oficial](https://es.reactjs.org/docs/hooks-intro.html)
-</p></details>
-
-- [ ] **CSS modules**
-
-  <details><summary>Links</summary><p>
-
-  * [Adding a CSS Modules Stylesheet - Documentación de Create React App (en inglés)](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
-</p></details>
-
-- [ ] **React Router**
-
-  <details><summary>Links</summary><p>
-
-  * [Quick Start - Documentación oficial (en inglés)](https://reactrouter.com/web/guides/quick-start)
-</p></details>
-
-### Vue
-
-- [ ] **Instancia de Vue.js**
-
-  <details><summary>Links</summary><p>
-
-  * [La instancia Vue - Documentación oficial](https://es.vuejs.org/v2/guide/instance.html)
-</p></details>
-
-- [ ] **Datos y métodos**
-
-  <details><summary>Links</summary><p>
-
-  * [Datos y Métodos - Documentación oficial](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-</p></details>
-
-- [ ] **Uso y creación de componentes**
-
-  <details><summary>Links</summary><p>
-
-  * [Conceptos Básicos de Componentes - Documentación oficial](https://es.vuejs.org/v2/guide/components.html)
-</p></details>
-
-- [ ] **Props**
-
-  <details><summary>Links</summary><p>
-
-  * [Pasando datos a componentes secundarios con Props - Documentación oficial](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-</p></details>
-
-- [ ] **Directivas (v-bind | v-model)**
-
-  <details><summary>Links</summary><p>
-
-  * [v-bind - Documentación oficial](https://es.vuejs.org/v2/api/#v-bind)
-  * [Binding en Formularios - Documentación oficial](https://es.vuejs.org/v2/guide/forms.html)
-</p></details>
-
-- [ ] **Iteración (v-for)**
-
-  <details><summary>Links</summary><p>
-
-  * [Mapeando una matriz a elementos con v-for - Documentación oficial](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for)
-</p></details>
-
-- [ ] **Eventos (v-on)**
-
-  <details><summary>Links</summary><p>
-
-  * [Manejo de eventos - Documentación oficial](https://es.vuejs.org/v2/guide/events.html)
-</p></details>
-
-- [ ] **Propiedades Computadas y Observadores**
-
-  <details><summary>Links</summary><p>
-
-  * [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
-</p></details>
-
-- [ ] **Routing**
-
-  <details><summary>Links</summary><p>
-
-  * [Getting Started - Documentación oficial de Vue Router](https://router.vuejs.org/guide/#html)
-</p></details>
-
-- [ ] **Clases y Estilos**
-
-  <details><summary>Links</summary><p>
-
-  * [Enlace Clases y Estilos - Documentación oficial](https://es.vuejs.org/v2/guide/class-and-style.html)
-</p></details>
 
 ## 4. Consideraciones generales
 
