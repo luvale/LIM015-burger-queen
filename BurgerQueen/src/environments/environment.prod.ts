@@ -1,6 +1,6 @@
  export const environment = {
     production: true,
-    firebaseConfig : {
+    firebase : {
       apiKey: "AIzaSyBDYDJy4KauNuVq2cmD5bOk_FFtYKdO_hw",
       authDomain: "burgerqueen-98eae.firebaseapp.com",
       databaseURL: "https://burgerqueen-98eae-default-rtdb.firebaseio.com",

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ComunicationService } from 'src/app/services/comunication.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
@@ -14,13 +14,20 @@ export class MenuComponent implements OnInit {
   base: number = 1;
   type:string = '';
   total:number = 0;
+  selectedTable:any;
 
-  constructor(private service: FirestoreService) {}
+  constructor(private firestore: FirestoreService,
+    private comunication: ComunicationService) {}
+    
   ngOnInit(): void {
     this.getMenu();
+    this.comunication.disparadorObservable.subscribe((data) => {
+      console.log(data);
+      this.selectedTable = data;
+    })
   }
   getMenu(){
-    this.service.getMenu().subscribe((data) => {
+    this.firestore.getMenu().subscribe((data) => {
       data.forEach((item) => {
         this.allProducts.push({
           id: item.payload.doc.id,
@@ -75,6 +82,10 @@ export class MenuComponent implements OnInit {
     }
   }
   createOrder(comentario:string){
-    this.service.createOrder(this.cart,this.total, comentario);
+    this.firestore.createOrder(this.cart,this.total, comentario, this.selectedTable.data.name);
   }
+
+  updateTableStatus(id:string, status:boolean) {
+    this.firestore.updateTableStatus(id, (status = !status))
+   }
 }

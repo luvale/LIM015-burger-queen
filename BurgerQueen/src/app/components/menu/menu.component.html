@@ -6,7 +6,7 @@
     <option value="Tarde">Resto del día</option>
   </select>
     <article class="cards-container">
-      <div class="cards" (click)="addToCart(item.data)" (click)="typeOfMenu(item.data.horario)" *ngFor= "let item of menu">
+      <div class="cards" (click)="addToCart(item.data);typeOfMenu(item.data.horario)" *ngFor= "let item of menu">
         <div><img src={{item.data.foto}}></div>
         <div><h2 class="card-name">{{item.data.producto}}</h2></div>
       </div>
@@ -19,7 +19,7 @@
       <hr>
       <h1 id="type">{{type}}</h1>
     </div>
-    <h1 id="table">Mesa 5</h1>
+    <h1 id="table">{{selectedTable.data.name}}</h1>
   </article>
   <section class="table-container">
     <table class="table">
@@ -45,7 +45,7 @@
   <textarea placeholder="Agrega un comentario" #comentario></textarea>
   <div id="btn-container">
     <button id="btn-cancel" (click)=deleteCart()>Cancelar Pedido</button>
-    <button id="btn-send" (click)=createOrder(comentario.value) [routerLink]="['/orders']">Enviar a Cocina</button>
+    <button id="btn-send" (click)=createOrder(comentario.value);updateTableStatus(selectedTable.id,selectedTable.data.status) [routerLink]="['/tables']">Enviar a Cocina</button>
   </div>
 </aside>
 </section>

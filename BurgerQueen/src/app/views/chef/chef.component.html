@@ -1,9 +1,9 @@
-<app-navbar-waiter></app-navbar-waiter>
+<app-navbar-chef></app-navbar-chef>
 <section>
   <article [ngClass]="{'greenCard': (item.data.status === 'Listo'), 
   'redCard': (item.data.status === 'Pendiente')}" *ngFor="let item of order">
     <h1 class="table-name">{{item.data.mesa}}</h1>
-    <p class="hour">{{ item.data.hora.toDate() | date:' h:mm:ss a' }}</p>
+    <p class="hour">{{ item.data.hora.toDate() | date:'h:mm:ss a'}}</p>
     <hr>
     <div class="table-container">
       <table>
@@ -17,15 +17,15 @@
         </tr>
       </table>
     </div>
-    <p class="total">Total: ${{item.data.precioTotal}}</p>
     <div class="coment-container" *ngIf= "item.data.comentario !== '' ">
       <p class="coment">Comentario: {{item.data.comentario}}</p>
     </div>
     <hr>
       <div class="status-container">
         <h2 class="status-title">Estado</h2> 
-        <h2 [ngClass]="{'ready': (item.data.status === 'Listo'), 
-        'pending': (item.data.status === 'Pendiente')}">{{item.data.status}}</h2>
+        <button *ngIf="(item.data.status === 'Pendiente'); else ready" (click)=updateOrderStatus(item.id)>
+          <h2 class="pending">{{item.data.status}}</h2></button>
+        <ng-template #ready><h2 class="ready">{{item.data.status}}</h2></ng-template>
       </div>
   </article>
 </section>
