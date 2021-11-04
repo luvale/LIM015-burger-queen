@@ -2,7 +2,8 @@
 
 ## Índice
 
-* [1. Resumen del proyecto](#2-resumen-del-proyecto)
+* [1. Preámbulo](#1-preámbulo)
+* [1. Preámbulo](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -10,17 +11,38 @@
 
 ***
 
-## 1. Resumen del proyecto
+## 1. Preámbulo
 
 Un pequeño restaurante de hamburguesas, que está creciendo, necesita una
 interfaz en la que puedan tomar pedidos usando una tablet, y enviarlos
 a la cocina para que se preparen ordenada y eficientemente (a través de un
-  _backend_ del que nos darán detalles más adelante).
+  _backend_).
 
-![Alt Text](https://media.giphy.com/media/l4FB5Lq0A02xxMTC0/giphy.gif)
+![Cangreburger](https://media.giphy.com/media/l4FB5Lq0A02xxMTC0/giphy.gif)
 
-<img src="https://media.giphy.com/media/l4FB5Lq0A02xxMTC0/giphy.gif" width="480" height="360">
+## 2. Resumen del proyecto
 
+Interfaz desarrollada con:
+
+<img alt="Angular" src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white">
+
+<img alt="Typescript" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
+
+<img alt="HTML" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+
+<img alt="Firebase" src ="https://img.shields.io/badge/Firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black">
+
+<img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+
+<br>
+
+<img alt="Figma" src ="https://img.shields.io/badge/Figma-9D4BF6?style=for-the-badge&logo=figma&logoColor=white">
+
+<img alt="Netflify" src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
+
+
+<br>
+<br>
 
 Esta es la información que tenemos del cliente:
 
