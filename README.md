@@ -34,13 +34,9 @@ Interfaz desarrollada con:
 
 <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 
-<br>
-
 <img alt="Figma" src ="https://img.shields.io/badge/Figma-9D4BF6?style=for-the-badge&logo=figma&logoColor=white">
 
 <img alt="Netflify" src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
-
-<br><br>
 
 ## 3. Vistas
 
