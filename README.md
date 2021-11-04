@@ -17,7 +17,10 @@ interfaz en la que puedan tomar pedidos usando una tablet, y enviarlos
 a la cocina para que se preparen ordenada y eficientemente (a través de un
   _backend_ del que nos darán detalles más adelante).
 
-<iframe src="https://giphy.com/embed/NGoWuyvI9Tdny" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/spongebob-squarepants-burger-funny-NGoWuyvI9Tdny">via GIPHY</a></p>
+![Alt Text](https://media.giphy.com/media/l4FB5Lq0A02xxMTC0/giphy.gif)
+
+<img src="https://media.giphy.com/media/l4FB5Lq0A02xxMTC0/giphy.gif" width="480" height="360">
+
 
 Esta es la información que tenemos del cliente:
 
